@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
 
 const ContactFooter = () => {
@@ -21,11 +21,11 @@ const ContactFooter = () => {
             className="text-center mb-16"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="h-px w-8 line-gold" />
-              <span className="text-gold text-sm tracking-[0.2em] uppercase font-body">
+              <div className="h-px w-8 line-navy" />
+              <span className="text-navy-light text-sm tracking-[0.2em] uppercase font-body">
                 Контакты
               </span>
-              <div className="h-px w-8 line-gold" />
+              <div className="h-px w-8 line-navy" />
             </div>
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
               Нужна консультация по ситуации?
@@ -50,7 +50,7 @@ const ContactFooter = () => {
                   placeholder="Ваше имя"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-5 py-4 rounded-md bg-card border border-gold-subtle text-foreground placeholder:text-muted-foreground font-body focus:outline-none focus:border-gold/50 transition-colors"
+                  className="w-full px-5 py-4 rounded-md bg-card border border-border text-foreground placeholder:text-muted-foreground font-body focus:outline-none focus:border-navy/40 focus:shadow-soft transition-all"
                 />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -59,14 +59,14 @@ const ContactFooter = () => {
                   placeholder="Email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full px-5 py-4 rounded-md bg-card border border-gold-subtle text-foreground placeholder:text-muted-foreground font-body focus:outline-none focus:border-gold/50 transition-colors"
+                  className="w-full px-5 py-4 rounded-md bg-card border border-border text-foreground placeholder:text-muted-foreground font-body focus:outline-none focus:border-navy/40 focus:shadow-soft transition-all"
                 />
                 <input
                   type="tel"
                   placeholder="Телефон"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full px-5 py-4 rounded-md bg-card border border-gold-subtle text-foreground placeholder:text-muted-foreground font-body focus:outline-none focus:border-gold/50 transition-colors"
+                  className="w-full px-5 py-4 rounded-md bg-card border border-border text-foreground placeholder:text-muted-foreground font-body focus:outline-none focus:border-navy/40 focus:shadow-soft transition-all"
                 />
               </div>
               <div>
@@ -75,12 +75,12 @@ const ContactFooter = () => {
                   rows={5}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full px-5 py-4 rounded-md bg-card border border-gold-subtle text-foreground placeholder:text-muted-foreground font-body focus:outline-none focus:border-gold/50 transition-colors resize-none"
+                  className="w-full px-5 py-4 rounded-md bg-card border border-border text-foreground placeholder:text-muted-foreground font-body focus:outline-none focus:border-navy/40 focus:shadow-soft transition-all resize-none"
                 />
               </div>
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
+                className="w-full px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
               >
                 Отправить заявку
               </button>
@@ -94,24 +94,24 @@ const ContactFooter = () => {
               className="space-y-8"
             >
               <div className="flex items-start gap-4">
-                <Mail className="w-6 h-6 text-gold shrink-0 mt-1" />
+                <Mail className="w-6 h-6 text-navy shrink-0 mt-1" />
                 <div>
-                  <div className="font-body font-semibold mb-1">Email</div>
+                  <div className="font-body font-semibold mb-1 text-foreground">Email</div>
                   <div className="text-muted-foreground font-body text-sm">
                     chargeback2022ru@gmail.com
                   </div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <Send className="w-6 h-6 text-gold shrink-0 mt-1" />
+                <Send className="w-6 h-6 text-navy shrink-0 mt-1" />
                 <div>
-                  <div className="font-body font-semibold mb-1">Telegram</div>
+                  <div className="font-body font-semibold mb-1 text-foreground">Telegram</div>
                   <div className="text-muted-foreground font-body text-sm">
                     <a
                       href="https://t.me/Chargeback_2022"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-gold transition-colors underline"
+                      className="hover:text-navy transition-colors underline"
                     >
                       @Chargeback_2022
                     </a>
@@ -119,9 +119,9 @@ const ContactFooter = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <Clock className="w-6 h-6 text-gold shrink-0 mt-1" />
+                <Clock className="w-6 h-6 text-navy shrink-0 mt-1" />
                 <div>
-                  <div className="font-body font-semibold mb-1">Режим работы</div>
+                  <div className="font-body font-semibold mb-1 text-foreground">Режим работы</div>
                   <div className="text-muted-foreground font-body text-sm">
                     Пн — Пт: 09:00 — 19:00<br />
                     Сб: 10:00 — 16:00
@@ -133,28 +133,28 @@ const ContactFooter = () => {
         </div>
       </section>
 
-      <footer className="py-12 border-t border-gold-subtle">
+      <footer className="py-12 border-t border-border bg-primary">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
             <div>
-              <div className="font-display text-2xl font-bold text-gradient-gold mb-3">
+              <div className="font-display text-2xl font-bold text-primary-foreground mb-3">
                 Chargeback
               </div>
-              <p className="text-muted-foreground font-body text-sm leading-relaxed">
+              <p className="text-primary-foreground/60 font-body text-sm leading-relaxed">
                 Профессиональный финансовый консалтинг.
                 Защита ваших интересов — наш приоритет.
               </p>
             </div>
             <div>
-              <div className="font-body font-semibold mb-3">Контакты</div>
-              <div className="text-muted-foreground font-body text-sm space-y-1">
+              <div className="font-body font-semibold mb-3 text-primary-foreground">Контакты</div>
+              <div className="text-primary-foreground/60 font-body text-sm space-y-1">
                 <p>chargeback2022ru@gmail.com</p>
                 <p>
                   <a
                     href="https://t.me/Chargeback_2022"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:text-gold transition-colors"
+                    className="hover:text-primary-foreground transition-colors"
                   >
                     Telegram: @Chargeback_2022
                   </a>
@@ -162,19 +162,19 @@ const ContactFooter = () => {
               </div>
             </div>
             <div>
-              <div className="font-body font-semibold mb-3">Правовая информация</div>
-              <div className="text-muted-foreground font-body text-sm space-y-2">
-                <a href="#" className="block hover:text-gold transition-colors">
+              <div className="font-body font-semibold mb-3 text-primary-foreground">Правовая информация</div>
+              <div className="text-primary-foreground/60 font-body text-sm space-y-2">
+                <a href="#" className="block hover:text-primary-foreground transition-colors">
                   Политика конфиденциальности
                 </a>
-                <a href="#" className="block hover:text-gold transition-colors">
+                <a href="#" className="block hover:text-primary-foreground transition-colors">
                   Пользовательское соглашение
                 </a>
               </div>
             </div>
           </div>
-          <div className="h-px line-gold opacity-10 mb-6" />
-          <div className="text-center text-muted-foreground font-body text-xs">
+          <div className="h-px bg-primary-foreground/10 mb-6" />
+          <div className="text-center text-primary-foreground/50 font-body text-xs">
             © 2022–2026 Chargeback. Все права защищены.
           </div>
         </div>

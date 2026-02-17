@@ -6,49 +6,46 @@
 
 @layer base {
   :root {
-    --background: 220 30% 8%;
-    --foreground: 210 20% 95%;
+    --background: 0 0% 100%;
+    --foreground: 235 60% 30%;
 
-    --card: 220 28% 12%;
-    --card-foreground: 210 20% 95%;
+    --card: 220 20% 97%;
+    --card-foreground: 235 60% 30%;
 
-    --popover: 220 28% 12%;
-    --popover-foreground: 210 20% 95%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 235 60% 30%;
 
-    --primary: 43 72% 55%;
-    --primary-foreground: 220 30% 8%;
+    --primary: 235 60% 30%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 25% 16%;
-    --secondary-foreground: 210 20% 90%;
+    --secondary: 220 10% 95%;
+    --secondary-foreground: 235 60% 30%;
 
-    --muted: 220 20% 18%;
-    --muted-foreground: 215 15% 55%;
+    --muted: 220 10% 95%;
+    --muted-foreground: 0 0% 44%;
 
-    --accent: 43 72% 55%;
-    --accent-foreground: 220 30% 8%;
+    --accent: 130 52% 33%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 20% 18%;
-    --input: 220 20% 20%;
-    --ring: 43 72% 55%;
+    --border: 220 15% 90%;
+    --input: 220 15% 88%;
+    --ring: 235 60% 30%;
 
     --radius: 0.5rem;
 
-    --gold: 43 72% 55%;
-    --gold-light: 43 60% 70%;
-    --navy: 220 30% 8%;
-    --navy-light: 220 28% 14%;
-    --navy-mid: 220 25% 20%;
+    --navy: 235 60% 30%;
+    --navy-light: 235 40% 45%;
+    --navy-mid: 235 30% 60%;
+    --slate: 0 0% 44%;
+    --slate-light: 0 0% 60%;
+    --cta: 130 52% 33%;
+    --cta-foreground: 0 0% 100%;
 
     --font-display: 'Playfair Display', serif;
     --font-body: 'Inter', sans-serif;
-  }
-
-  .dark {
-    --background: 220 30% 8%;
-    --foreground: 210 20% 95%;
   }
 }
 
@@ -64,30 +61,35 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-display);
+    color: hsl(var(--navy));
   }
 }
 
 @layer utilities {
-  .text-gradient-gold {
-    background: linear-gradient(135deg, hsl(43 72% 55%), hsl(43 60% 70%));
+  .text-gradient-navy {
+    background: linear-gradient(135deg, hsl(235 60% 30%), hsl(235 40% 45%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
-  .border-gold-subtle {
-    border-color: hsl(43 72% 55% / 0.2);
+  .border-subtle {
+    border-color: hsl(220 15% 88%);
   }
 
-  .bg-gold-subtle {
-    background-color: hsl(43 72% 55% / 0.08);
+  .bg-subtle {
+    background-color: hsl(220 20% 97%);
   }
 
-  .glow-gold {
-    box-shadow: 0 0 40px hsl(43 72% 55% / 0.15);
+  .shadow-soft {
+    box-shadow: 0 4px 24px hsl(235 60% 30% / 0.06);
   }
 
-  .line-gold {
-    background: linear-gradient(90deg, hsl(43 72% 55%), hsl(43 60% 70%));
+  .shadow-soft-lg {
+    box-shadow: 0 8px 40px hsl(235 60% 30% / 0.08);
+  }
+
+  .line-navy {
+    background: linear-gradient(90deg, hsl(235 60% 30%), hsl(235 40% 45%));
   }
 }
