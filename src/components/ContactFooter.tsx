@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
 
 const ContactFooter = () => {
@@ -7,7 +7,6 @@ const ContactFooter = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // placeholder
   };
 
   return (
@@ -29,10 +28,10 @@ const ContactFooter = () => {
               <div className="h-px w-8 line-gold" />
             </div>
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-              Свяжитесь с нами
+              Нужна консультация по ситуации?
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto font-body text-lg">
-              Получите бесплатную консультацию от наших экспертов
+              Мы поможем оценить перспективы дела, проверить основания и подготовить грамотное обращение в банк.
             </p>
           </motion.div>
 
@@ -95,31 +94,27 @@ const ContactFooter = () => {
               className="space-y-8"
             >
               <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-gold shrink-0 mt-1" />
-                <div>
-                  <div className="font-body font-semibold mb-1">Адрес</div>
-                  <div className="text-muted-foreground font-body text-sm">
-                    г. Москва, ул. Тверская, д. 22, стр. 1<br />
-                    Бизнес-центр «Континенталь», офис 405
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Phone className="w-6 h-6 text-gold shrink-0 mt-1" />
-                <div>
-                  <div className="font-body font-semibold mb-1">Телефон</div>
-                  <div className="text-muted-foreground font-body text-sm">
-                    +7 (495) 123-45-67<br />
-                    +7 (800) 200-30-40 (бесплатно по РФ)
-                  </div>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-gold shrink-0 mt-1" />
                 <div>
                   <div className="font-body font-semibold mb-1">Email</div>
                   <div className="text-muted-foreground font-body text-sm">
-                    info@chargeback.ru
+                    chargeback2022ru@gmail.com
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Send className="w-6 h-6 text-gold shrink-0 mt-1" />
+                <div>
+                  <div className="font-body font-semibold mb-1">Telegram</div>
+                  <div className="text-muted-foreground font-body text-sm">
+                    <a
+                      href="https://t.me/Chargeback_2022"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:text-gold transition-colors underline"
+                    >
+                      @Chargeback_2022
+                    </a>
                   </div>
                 </div>
               </div>
@@ -146,17 +141,24 @@ const ContactFooter = () => {
                 Chargeback
               </div>
               <p className="text-muted-foreground font-body text-sm leading-relaxed">
-                Профессиональный финансовый и юридический консалтинг.
+                Профессиональный финансовый консалтинг.
                 Защита ваших интересов — наш приоритет.
               </p>
             </div>
             <div>
-              <div className="font-body font-semibold mb-3">Реквизиты</div>
+              <div className="font-body font-semibold mb-3">Контакты</div>
               <div className="text-muted-foreground font-body text-sm space-y-1">
-                <p>ООО «Чарджбэк Консалтинг»</p>
-                <p>ИНН: 7710123456</p>
-                <p>ОГРН: 1157746012345</p>
-                <p>КПП: 771001001</p>
+                <p>chargeback2022ru@gmail.com</p>
+                <p>
+                  <a
+                    href="https://t.me/Chargeback_2022"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-gold transition-colors"
+                  >
+                    Telegram: @Chargeback_2022
+                  </a>
+                </p>
               </div>
             </div>
             <div>
@@ -168,15 +170,12 @@ const ContactFooter = () => {
                 <a href="#" className="block hover:text-gold transition-colors">
                   Пользовательское соглашение
                 </a>
-                <a href="#" className="block hover:text-gold transition-colors">
-                  Публичная оферта
-                </a>
               </div>
             </div>
           </div>
           <div className="h-px line-gold opacity-10 mb-6" />
           <div className="text-center text-muted-foreground font-body text-xs">
-            © 2024 Chargeback. Все права защищены. Информация на сайте не является публичной офертой.
+            © 2022–2026 Chargeback. Все права защищены.
           </div>
         </div>
       </footer>
