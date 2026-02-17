@@ -1,11 +1,10 @@
 import { motion } from "framer-motion";
-import { Shield, TrendingUp, Award } from "lucide-react";
+import { TrendingUp, Percent } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
-  { value: "98.7%", label: "Возврат средств", icon: TrendingUp },
-  { value: "2500+", label: "Успешных дел", icon: Award },
-  { value: "12 лет", label: "На рынке", icon: Shield },
+  { value: "92.3%", label: "Возврат вложенных средств", icon: TrendingUp },
+  { value: "72%", label: "Возврат чистой прибыли", icon: Percent },
 ];
 
 const HeroSection = () => {
@@ -32,17 +31,18 @@ const HeroSection = () => {
             </span>
           </div>
 
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-            Профессиональный
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Chargeback —
             <br />
-            <span className="text-gradient-gold">финансовый</span>
+            <span className="text-gradient-gold">Ваш законный инструмент</span>
             <br />
-            консалтинг
+            возврата средств
           </h1>
 
           <p className="text-muted-foreground text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-body">
-            Защищаем ваши финансовые интересы. Возврат денежных средств, 
-            разрешение споров и юридическое сопровождение с гарантией результата.
+            Chargeback — это официальная банковская процедура, позволяющая оспорить 
+            ранее совершённый платёж и вернуть деньги, если услуга не была оказана, 
+            товар не получен или условия сделки были нарушены.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-16">
@@ -56,7 +56,7 @@ const HeroSection = () => {
               href="#services"
               className="inline-flex items-center justify-center px-8 py-4 border border-gold-subtle text-foreground font-body font-medium rounded-md hover:bg-gold-subtle transition-colors"
             >
-              Наши услуги
+              Подробнее
             </a>
           </div>
         </motion.div>
@@ -65,7 +65,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg"
         >
           {stats.map((stat) => (
             <div
