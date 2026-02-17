@@ -40,7 +40,7 @@ const InfoSections = () => {
   return (
     <>
       {/* Когда применяется */}
-      <section className="py-20 relative">
+      <section className="py-24 relative">
         <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -49,11 +49,11 @@ const InfoSections = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-px w-8 line-gold" />
-              <span className="text-gold text-sm tracking-[0.2em] uppercase font-body">
+              <div className="h-px w-8 line-navy" />
+              <span className="text-navy-light text-sm tracking-[0.2em] uppercase font-body">
                 Применение
               </span>
-              <div className="h-px w-8 line-gold" />
+              <div className="h-px w-8 line-navy" />
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
               Когда применяется Chargeback
@@ -69,10 +69,10 @@ const InfoSections = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="flex items-center gap-4 p-4 rounded-lg bg-card border border-gold-subtle"
+                  className="flex items-center gap-4 p-5 rounded-lg bg-card border border-border shadow-soft"
                 >
-                  <item.icon className="w-6 h-6 text-gold shrink-0" />
-                  <span className="font-body">{item.text}</span>
+                  <item.icon className="w-6 h-6 text-navy shrink-0" />
+                  <span className="font-body text-foreground">{item.text}</span>
                 </motion.div>
               ))}
             </div>
@@ -81,7 +81,7 @@ const InfoSections = () => {
       </section>
 
       {/* Как это работает */}
-      <section className="py-20 bg-secondary/30 relative">
+      <section className="py-24 bg-secondary relative">
         <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -90,11 +90,11 @@ const InfoSections = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-px w-8 line-gold" />
-              <span className="text-gold text-sm tracking-[0.2em] uppercase font-body">
+              <div className="h-px w-8 line-navy" />
+              <span className="text-navy-light text-sm tracking-[0.2em] uppercase font-body">
                 Процесс
               </span>
-              <div className="h-px w-8 line-gold" />
+              <div className="h-px w-8 line-navy" />
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
               Как это работает
@@ -107,17 +107,17 @@ const InfoSections = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="flex items-center gap-5 p-5 rounded-lg bg-card border border-gold-subtle"
+                  className="flex items-center gap-5 p-5 rounded-lg bg-background border border-border shadow-soft"
                 >
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-primary-foreground font-display font-bold shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-primary-foreground font-display font-bold shrink-0">
                     {step.num}
                   </div>
-                  <step.icon className="w-6 h-6 text-gold shrink-0" />
-                  <span className="font-body text-lg">{step.text}</span>
+                  <step.icon className="w-6 h-6 text-navy shrink-0" />
+                  <span className="font-body text-lg text-foreground">{step.text}</span>
                 </motion.div>
               ))}
             </div>
-            <p className="text-muted-foreground font-body mt-6 text-center italic">
+            <p className="text-muted-foreground font-body mt-8 text-center italic">
               Всё происходит строго в рамках банковских регламентов.
             </p>
           </motion.div>
@@ -125,7 +125,7 @@ const InfoSections = () => {
       </section>
 
       {/* Почему это надёжно */}
-      <section className="py-20 relative">
+      <section className="py-24 relative">
         <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -136,7 +136,7 @@ const InfoSections = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
               Почему это надёжно
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {reliability.map((item, i) => (
                 <motion.div
                   key={i}
@@ -144,10 +144,10 @@ const InfoSections = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.08 }}
-                  className="flex items-center gap-4 p-5 rounded-lg bg-card border border-gold-subtle"
+                  className="flex items-center gap-4 p-6 rounded-lg bg-card border border-border shadow-soft"
                 >
-                  <item.icon className="w-6 h-6 text-gold shrink-0" />
-                  <span className="font-body">{item.text}</span>
+                  <item.icon className="w-6 h-6 text-navy shrink-0" />
+                  <span className="font-body text-foreground">{item.text}</span>
                 </motion.div>
               ))}
             </div>
@@ -156,7 +156,7 @@ const InfoSections = () => {
       </section>
 
       {/* Ключевое преимущество + Важно для клиента */}
-      <section className="py-20 bg-secondary/30 relative">
+      <section className="py-24 bg-secondary relative">
         <div className="container max-w-4xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div
@@ -164,9 +164,9 @@ const InfoSections = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="p-8 rounded-lg bg-card border border-gold-subtle"
+              className="p-8 rounded-lg bg-background border border-border shadow-soft"
             >
-              <Lightbulb className="w-8 h-8 text-gold mb-4" />
+              <Lightbulb className="w-8 h-8 text-navy mb-4" />
               <h3 className="font-display text-2xl font-bold mb-4">Ключевое преимущество</h3>
               <p className="font-body text-muted-foreground leading-relaxed">
                 Процедура Chargeback является <strong className="text-foreground">бесплатной</strong> для клиента. 
@@ -180,9 +180,9 @@ const InfoSections = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="p-8 rounded-lg bg-card border border-gold-subtle"
+              className="p-8 rounded-lg bg-background border border-border shadow-soft"
             >
-              <FileCheck className="w-8 h-8 text-gold mb-4" />
+              <FileCheck className="w-8 h-8 text-navy mb-4" />
               <h3 className="font-display text-2xl font-bold mb-4">Важно для клиента</h3>
               <div className="space-y-4 font-body text-muted-foreground text-sm leading-relaxed">
                 <p>💡 Подача заявления на Chargeback является бесплатной.</p>
@@ -195,7 +195,7 @@ const InfoSections = () => {
       </section>
 
       {/* Chargeback — это защита */}
-      <section className="py-20 relative">
+      <section className="py-24 relative">
         <div className="container max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -213,7 +213,7 @@ const InfoSections = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
             {clientGets.map((item, i) => (
               <motion.div
                 key={i}
@@ -221,10 +221,10 @@ const InfoSections = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="flex items-center gap-4 p-5 rounded-lg bg-card border border-gold-subtle"
+                className="flex items-center gap-4 p-6 rounded-lg bg-card border border-border shadow-soft"
               >
-                <item.icon className="w-6 h-6 text-gold shrink-0" />
-                <span className="font-body">{item.text}</span>
+                <item.icon className="w-6 h-6 text-navy shrink-0" />
+                <span className="font-body text-foreground">{item.text}</span>
               </motion.div>
             ))}
           </div>
@@ -232,7 +232,7 @@ const InfoSections = () => {
       </section>
 
       {/* Защита Ваших прав */}
-      <section className="py-20 bg-secondary/30 relative">
+      <section className="py-24 bg-secondary relative">
         <div className="container max-w-3xl text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -249,7 +249,7 @@ const InfoSections = () => {
             </p>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
+              className="inline-flex items-center justify-center px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
             >
               Получить консультацию
             </a>

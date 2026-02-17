@@ -37,7 +37,6 @@ const services = [
 const ServicesSection = () => {
   return (
     <section id="services" className="py-24 relative">
-      <div className="absolute top-0 left-0 right-0 h-px line-gold opacity-10" />
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,11 +46,11 @@ const ServicesSection = () => {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-8 line-gold" />
-            <span className="text-gold text-sm tracking-[0.2em] uppercase font-body">
+            <div className="h-px w-8 line-navy" />
+            <span className="text-navy-light text-sm tracking-[0.2em] uppercase font-body">
               Услуги
             </span>
-            <div className="h-px w-8 line-gold" />
+            <div className="h-px w-8 line-navy" />
           </div>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
             Области экспертизы
@@ -61,7 +60,7 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, i) => (
             <motion.div
               key={service.title}
@@ -69,9 +68,9 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group p-8 rounded-lg bg-card border border-gold-subtle hover:glow-gold transition-all duration-500"
+              className="group p-8 rounded-lg bg-card border border-border hover:shadow-soft-lg transition-all duration-500"
             >
-              <service.icon className="w-10 h-10 text-gold mb-5 group-hover:scale-110 transition-transform" />
+              <service.icon className="w-10 h-10 text-navy mb-5 group-hover:scale-110 transition-transform" />
               <h3 className="font-display text-xl font-semibold mb-3">
                 {service.title}
               </h3>
