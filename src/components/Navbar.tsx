@@ -2,8 +2,10 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
+  { href: "#about", label: "О нас" },
   { href: "#services", label: "Услуги" },
-  { href: "#documents", label: "Документы" },
+  { href: "#faq", label: "FAQ" },
+  { href: "#reviews", label: "Отзывы" },
   { href: "#contact", label: "Контакты" },
 ];
 

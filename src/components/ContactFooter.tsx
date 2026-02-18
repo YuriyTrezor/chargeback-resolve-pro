@@ -1,12 +1,20 @@
 import { motion } from "framer-motion";
 import { Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactFooter = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
+  const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const subject = encodeURIComponent(`Заявка от ${formData.name}`);
+    const body = encodeURIComponent(
+      `Имя: ${formData.name}\nEmail: ${formData.email}\nТелефон: ${formData.phone}\n\nСообщение:\n${formData.message}`
+    );
+    window.location.href = `mailto:chargeback2022ru@gmail.com?subject=${subject}&body=${body}`;
+    toast({ title: "Заявка отправляется", description: "Откроется ваш почтовый клиент для отправки." });
   };
 
   return (
@@ -48,6 +56,7 @@ const ContactFooter = () => {
                 <input
                   type="text"
                   placeholder="Ваше имя"
+                  required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   className="w-full px-5 py-4 rounded-md bg-card border border-border text-foreground placeholder:text-muted-foreground font-body focus:outline-none focus:border-navy/40 focus:shadow-soft transition-all"
@@ -57,6 +66,7 @@ const ContactFooter = () => {
                 <input
                   type="email"
                   placeholder="Email"
+                  required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   className="w-full px-5 py-4 rounded-md bg-card border border-border text-foreground placeholder:text-muted-foreground font-body focus:outline-none focus:border-navy/40 focus:shadow-soft transition-all"
@@ -73,6 +83,7 @@ const ContactFooter = () => {
                 <textarea
                   placeholder="Опишите вашу ситуацию"
                   rows={5}
+                  required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full px-5 py-4 rounded-md bg-card border border-border text-foreground placeholder:text-muted-foreground font-body focus:outline-none focus:border-navy/40 focus:shadow-soft transition-all resize-none"
@@ -80,7 +91,7 @@ const ContactFooter = () => {
               </div>
               <button
                 type="submit"
-                className="w-full px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
+                className="w-full px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity cursor-pointer"
               >
                 Отправить заявку
               </button>
@@ -97,25 +108,26 @@ const ContactFooter = () => {
                 <Mail className="w-6 h-6 text-navy shrink-0 mt-1" />
                 <div>
                   <div className="font-body font-semibold mb-1 text-foreground">Email</div>
-                  <div className="text-muted-foreground font-body text-sm">
+                  <a
+                    href="mailto:chargeback2022ru@gmail.com"
+                    className="text-muted-foreground font-body text-sm hover:text-navy transition-colors underline"
+                  >
                     chargeback2022ru@gmail.com
-                  </div>
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
                 <Send className="w-6 h-6 text-navy shrink-0 mt-1" />
                 <div>
                   <div className="font-body font-semibold mb-1 text-foreground">Telegram</div>
-                  <div className="text-muted-foreground font-body text-sm">
-                    <a
-                      href="https://t.me/Chargeback_2022"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-navy transition-colors underline"
-                    >
-                      @Chargeback_2022
-                    </a>
-                  </div>
+                  <a
+                    href="https://t.me/Chargeback_2022"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground font-body text-sm hover:text-navy transition-colors underline"
+                  >
+                    @Chargeback_2022
+                  </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -123,8 +135,7 @@ const ContactFooter = () => {
                 <div>
                   <div className="font-body font-semibold mb-1 text-foreground">Режим работы</div>
                   <div className="text-muted-foreground font-body text-sm">
-                    Пн — Пт: 09:00 — 19:00<br />
-                    Сб: 10:00 — 16:00
+                    Пн — Пт: 10:00 — 20:00 (МСК)
                   </div>
                 </div>
               </div>
@@ -148,7 +159,11 @@ const ContactFooter = () => {
             <div>
               <div className="font-body font-semibold mb-3 text-primary-foreground">Контакты</div>
               <div className="text-primary-foreground/60 font-body text-sm space-y-1">
-                <p>chargeback2022ru@gmail.com</p>
+                <p>
+                  <a href="mailto:chargeback2022ru@gmail.com" className="hover:text-primary-foreground transition-colors">
+                    chargeback2022ru@gmail.com
+                  </a>
+                </p>
                 <p>
                   <a
                     href="https://t.me/Chargeback_2022"
@@ -164,11 +179,11 @@ const ContactFooter = () => {
             <div>
               <div className="font-body font-semibold mb-3 text-primary-foreground">Правовая информация</div>
               <div className="text-primary-foreground/60 font-body text-sm space-y-2">
-                <a href="#" className="block hover:text-primary-foreground transition-colors">
+                <a href="/docs/privacy.html" target="_blank" className="block hover:text-primary-foreground transition-colors">
                   Политика конфиденциальности
                 </a>
-                <a href="#" className="block hover:text-primary-foreground transition-colors">
-                  Пользовательское соглашение
+                <a href="/docs/oferta.html" target="_blank" className="block hover:text-primary-foreground transition-colors">
+                  Публичная оферта
                 </a>
               </div>
             </div>

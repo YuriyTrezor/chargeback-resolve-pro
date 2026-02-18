@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Banknote, Gavel, BarChart3, ShieldCheck, FileSearch, Bitcoin } from "lucide-react";
+import { Banknote, BarChart3, ShieldCheck, FileSearch, Bitcoin } from "lucide-react";
 
 const services = [
   {
@@ -11,11 +11,6 @@ const services = [
     icon: Bitcoin,
     title: "Возврат криптовалютных средств",
     description: "Работаем с возвратом средств, которые были переведены в криптовалюте. Анализ транзакций и сопровождение процесса.",
-  },
-  {
-    icon: Gavel,
-    title: "Разрешение споров",
-    description: "Медиация, арбитраж и представительство. Защита интересов в финансовых спорах любой сложности.",
   },
   {
     icon: BarChart3,
