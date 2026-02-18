@@ -2,12 +2,12 @@ import { motion } from "framer-motion";
 import { FileText, Download } from "lucide-react";
 
 const documents = [
-  { name: "Договор оказания услуг", type: "PDF", size: "245 КБ" },
-  { name: "Политика конфиденциальности", type: "PDF", size: "180 КБ" },
-  { name: "Согласие на обработку персональных данных", type: "PDF", size: "120 КБ" },
-  { name: "Публичная оферта", type: "PDF", size: "310 КБ" },
-  { name: "Лицензия на осуществление деятельности", type: "PDF", size: "95 КБ" },
-  { name: "Реквизиты компании", type: "PDF", size: "60 КБ" },
+  { name: "Договор оказания услуг", type: "HTML", size: "Открыть", href: "/docs/dogovor.html" },
+  { name: "Политика конфиденциальности", type: "HTML", size: "Открыть", href: "/docs/privacy.html" },
+  { name: "Согласие на обработку персональных данных", type: "HTML", size: "Открыть", href: "/docs/consent.html" },
+  { name: "Публичная оферта", type: "HTML", size: "Открыть", href: "/docs/oferta.html" },
+  { name: "Лицензия на осуществление деятельности", type: "HTML", size: "Открыть", href: "/docs/license.html" },
+  { name: "Реквизиты компании", type: "HTML", size: "Открыть", href: "/docs/requisites.html" },
 ];
 
 const DocumentsSection = () => {
@@ -38,8 +38,11 @@ const DocumentsSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto">
           {documents.map((doc, i) => (
-            <motion.button
+            <motion.a
               key={doc.name}
+              href={doc.href}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -52,11 +55,11 @@ const DocumentsSection = () => {
                   {doc.name}
                 </div>
                 <div className="text-muted-foreground text-xs font-body">
-                  {doc.type} · {doc.size}
+                  Документ · {doc.size}
                 </div>
               </div>
               <Download className="w-4 h-4 text-muted-foreground group-hover:text-navy transition-colors shrink-0" />
-            </motion.button>
+            </motion.a>
           ))}
         </div>
       </div>
