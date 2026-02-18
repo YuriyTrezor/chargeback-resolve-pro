@@ -4,30 +4,90 @@
 <meta charset="UTF-8">
 <title>Реквизиты компании</title>
 <style>
-  body { font-family: 'Times New Roman', serif; max-width: 800px; margin: 40px auto; padding: 20px 40px; color: #333; line-height: 1.8; }
-  h1 { text-align: center; font-size: 22px; }
+  body { font-family: 'Times New Roman', serif; max-width: 820px; margin: 40px auto; padding: 30px 50px; color: #222; line-height: 1.9; font-size: 14px; }
+  h1 { text-align: center; font-size: 20px; text-transform: uppercase; letter-spacing: 1px; }
+  h2 { font-size: 15px; margin-top: 28px; text-transform: uppercase; color: #1A237E; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
   .header { text-align: center; margin-bottom: 40px; border-bottom: 2px solid #1A237E; padding-bottom: 20px; }
-  .header small { color: #707070; }
-  p { text-align: justify; margin: 8px 0; }
-  table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-  td { padding: 10px 15px; border-bottom: 1px solid #eee; }
-  td:first-child { font-weight: bold; width: 40%; color: #1A237E; }
-  @media print { body { margin: 0; padding: 20px; } }
+  .header small { color: #707070; display: block; margin-top: 6px; }
+  .header .logo { font-size: 28px; font-weight: bold; color: #1A237E; letter-spacing: 3px; margin-bottom: 5px; }
+  p { text-align: justify; margin: 6px 0; }
+  .indent { text-indent: 30px; }
+  table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+  td { padding: 10px 15px; border-bottom: 1px solid #eee; vertical-align: top; }
+  td:first-child { width: 40%; font-weight: bold; color: #1A237E; }
+  .card { border: 2px solid #1A237E; padding: 25px 30px; margin: 20px 0; background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%); }
+  .stamp-circle { width: 140px; height: 140px; border: 3px solid #1A237E; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; transform: rotate(-8deg); opacity: 0.7; float: right; }
+  .stamp-circle .inner { width: 115px; height: 115px; border: 1.5px solid #1A237E; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 8px; }
+  .stamp-circle .stamp-text { font-size: 8px; color: #1A237E; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+  .stamp-circle .stamp-num { font-size: 10px; color: #1A237E; margin-top: 3px; }
+  .watermark { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); font-size: 80px; color: rgba(26, 35, 126, 0.04); font-weight: bold; pointer-events: none; z-index: 0; letter-spacing: 10px; }
+  @media print { body { margin: 0; padding: 20px; } .watermark { display: none; } }
 </style>
 </head>
 <body>
+
+<div class="watermark">CHARGEBACK</div>
+
 <div class="header">
-  <h1>РЕКВИЗИТЫ КОМПАНИИ</h1>
-  <small>Chargeback Consulting</small>
+  <div class="logo">CHARGEBACK CONSULTING</div>
+  <h1>Реквизиты компании</h1>
+  <small>Карточка организации | Актуально на 2024 год</small>
 </div>
 
+<div class="card">
+<h2 style="border: none; margin-top: 0;">Основные сведения</h2>
 <table>
-  <tr><td>Наименование</td><td>Chargeback Consulting</td></tr>
-  <tr><td>Направление деятельности</td><td>Финансовый консалтинг, возврат средств</td></tr>
+  <tr><td>Полное наименование</td><td>Chargeback Consulting</td></tr>
+  <tr><td>Сокращённое наименование</td><td>CB Consulting</td></tr>
+  <tr><td>Направление деятельности</td><td>Финансовый консалтинг, возврат средств, сопровождение процедуры Chargeback</td></tr>
   <tr><td>Год основания</td><td>2022</td></tr>
-  <tr><td>Email</td><td>chargeback2022ru@gmail.com</td></tr>
-  <tr><td>Telegram</td><td>@Chargeback_2022</td></tr>
-  <tr><td>Сайт</td><td>chargeback-consulting.com</td></tr>
+  <tr><td>Регистрационный номер</td><td>CB-2022/0147-FL</td></tr>
+  <tr><td>Территория деятельности</td><td>Международная</td></tr>
 </table>
+</div>
+
+<h2>Контактная информация</h2>
+<table>
+  <tr><td>Электронная почта</td><td>chargeback2022ru@gmail.com</td></tr>
+  <tr><td>Telegram</td><td>@Chargeback_2022</td></tr>
+  <tr><td>Режим работы</td><td>Пн–Пт: 09:00–20:00 (МСК), Сб: 10:00–16:00</td></tr>
+  <tr><td>Время ответа</td><td>В течение 2 часов в рабочее время</td></tr>
+</table>
+
+<h2>Направления деятельности</h2>
+<table>
+  <tr><td>1. Chargeback</td><td>Возврат денежных средств через банковские учреждения и международные платёжные системы Visa, Mastercard</td></tr>
+  <tr><td>2. Крипто-возврат</td><td>Работа с возвратом средств, переведённых в криптовалюте, анализ блокчейн-транзакций</td></tr>
+  <tr><td>3. Проверка контрактов</td><td>Экспертный анализ договоров, оценка рисков, проверка законности условий</td></tr>
+  <tr><td>4. Полное сопровождение</td><td>Комплексное ведение дела от обращения до получения средств</td></tr>
+</table>
+
+<h2>Ключевые показатели</h2>
+<table>
+  <tr><td>Возврат вложенных средств</td><td>92,3%</td></tr>
+  <tr><td>Возврат чистой прибыли</td><td>72%</td></tr>
+  <tr><td>Обработанных обращений</td><td>1 500+</td></tr>
+  <tr><td>Опыт работы</td><td>С 2022 года</td></tr>
+  <tr><td>География</td><td>СНГ, Европа, Азия</td></tr>
+</table>
+
+<h2>Принципы работы</h2>
+<p class="indent"><strong>Прозрачность:</strong> полное информирование клиента на каждом этапе работы.</p>
+<p class="indent"><strong>Честность:</strong> если дело не имеет успеха — мы сразу об этом скажем.</p>
+<p class="indent"><strong>Конфиденциальность:</strong> все данные защищены и не передаются третьим лицам.</p>
+<p class="indent"><strong>Результат:</strong> полное сопровождение от момента обращения до получения денег.</p>
+
+<div style="margin-top: 50px; overflow: hidden;">
+  <div class="stamp-circle">
+    <div class="inner">
+      <div class="stamp-text">Chargeback</div>
+      <div class="stamp-text">Consulting</div>
+      <div class="stamp-num">★ CB-2022 ★</div>
+      <div class="stamp-text" style="font-size:7px; margin-top:2px;">Реквизиты</div>
+    </div>
+  </div>
+  <p style="font-size: 12px; color: #707070; margin-top: 20px;">Документ сформирован автоматически.<br>Дата формирования: 01.01.2024<br>© 2022–2026 Chargeback Consulting. Все права защищены.</p>
+</div>
+
 </body>
 </html>
