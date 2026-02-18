@@ -4,31 +4,83 @@
 <meta charset="UTF-8">
 <title>Согласие на обработку персональных данных</title>
 <style>
-  body { font-family: 'Times New Roman', serif; max-width: 800px; margin: 40px auto; padding: 20px 40px; color: #333; line-height: 1.8; }
-  h1 { text-align: center; font-size: 22px; }
+  body { font-family: 'Times New Roman', serif; max-width: 820px; margin: 40px auto; padding: 30px 50px; color: #222; line-height: 1.9; font-size: 14px; }
+  h1 { text-align: center; font-size: 20px; text-transform: uppercase; letter-spacing: 1px; }
   .header { text-align: center; margin-bottom: 40px; border-bottom: 2px solid #1A237E; padding-bottom: 20px; }
-  .header small { color: #707070; }
-  p { text-align: justify; margin: 8px 0; }
+  .header small { color: #707070; display: block; margin-top: 6px; }
+  .header .logo { font-size: 28px; font-weight: bold; color: #1A237E; letter-spacing: 3px; margin-bottom: 5px; }
+  p { text-align: justify; margin: 6px 0; }
+  .indent { text-indent: 30px; }
+  .field { border-bottom: 1px solid #999; display: inline-block; min-width: 250px; height: 20px; margin: 0 5px; }
+  .stamp-circle { width: 140px; height: 140px; border: 3px solid #1A237E; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; transform: rotate(-10deg); opacity: 0.7; margin-top: 30px; float: right; }
+  .stamp-circle .inner { width: 115px; height: 115px; border: 1.5px solid #1A237E; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column; padding: 8px; }
+  .stamp-circle .stamp-text { font-size: 8px; color: #1A237E; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+  .stamp-circle .stamp-num { font-size: 10px; color: #1A237E; margin-top: 3px; }
+  .rect-stamp { border: 2px solid #2E7D32; padding: 6px 16px; display: inline-block; transform: rotate(-4deg); opacity: 0.7; margin-top: 20px; }
+  .rect-stamp span { color: #2E7D32; font-weight: bold; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; }
   @media print { body { margin: 0; padding: 20px; } }
 </style>
 </head>
 <body>
+
 <div class="header">
-  <h1>СОГЛАСИЕ НА ОБРАБОТКУ ПЕРСОНАЛЬНЫХ ДАННЫХ</h1>
-  <small>Форма согласия</small>
+  <div class="logo">CHARGEBACK CONSULTING</div>
+  <h1>Согласие на обработку персональных данных</h1>
+  <small>В соответствии с Федеральным законом №152-ФЗ «О персональных данных»</small>
 </div>
 
-<p>Я, ___________________________________ (ФИО), даю своё согласие компании Chargeback Consulting на обработку моих персональных данных, включая:</p>
+<p class="indent">Я, <span class="field"></span> (ФИО полностью),</p>
+<p>дата рождения: <span class="field" style="min-width:150px;"></span>,</p>
+<p>документ, удостоверяющий личность: <span class="field"></span>,</p>
+<p>серия и номер: <span class="field" style="min-width:150px;"></span>,</p>
+<p>адрес регистрации: <span class="field" style="min-width:350px;"></span>,</p>
+<p>контактный телефон: <span class="field" style="min-width:180px;"></span>,</p>
+<p>адрес электронной почты: <span class="field" style="min-width:200px;"></span>,</p>
 
-<p>— фамилию, имя, отчество;</p>
+<p class="indent" style="margin-top: 20px;">настоящим даю своё добровольное и осознанное согласие компании <strong>Chargeback Consulting</strong> (далее — «Оператор») на обработку моих персональных данных на следующих условиях:</p>
+
+<p style="margin-top: 15px;"><strong>1. Перечень персональных данных, на обработку которых даётся согласие:</strong></p>
+<p>— фамилия, имя, отчество;</p>
+<p>— дата рождения;</p>
+<p>— данные документа, удостоверяющего личность;</p>
+<p>— адрес регистрации и фактического проживания;</p>
 <p>— контактный телефон и адрес электронной почты;</p>
-<p>— иные данные, предоставленные мной в рамках консультации.</p>
+<p>— финансовая информация, предоставленная для анализа (выписки, подтверждения транзакций, переписка);</p>
+<p>— иные данные, добровольно предоставленные мной в рамках обращения за консультацией.</p>
 
-<p>Обработка персональных данных осуществляется в целях оказания консультационных услуг, связи со мной по вопросам сотрудничества.</p>
+<p style="margin-top: 15px;"><strong>2. Цели обработки персональных данных:</strong></p>
+<p>— оказание консультационных услуг в сфере возврата денежных средств;</p>
+<p>— подготовка документов для процедуры Chargeback;</p>
+<p>— связь со мной по вопросам сотрудничества и информирование о ходе работы;</p>
+<p>— исполнение обязательств по договору оказания услуг;</p>
+<p>— ведение внутреннего учёта и документооборота.</p>
 
-<p>Согласие действует с момента его предоставления и может быть отозвано путём направления письменного уведомления на адрес: chargeback2022ru@gmail.com.</p>
+<p style="margin-top: 15px;"><strong>3. Действия с персональными данными:</strong></p>
+<p class="indent">Согласие даётся на совершение следующих действий: сбор, запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передача (предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.</p>
 
-<p style="margin-top: 40px;">Дата: «___» ____________ 202__ г.</p>
-<p>Подпись: ___________________</p>
+<p style="margin-top: 15px;"><strong>4. Способы обработки:</strong></p>
+<p class="indent">Обработка осуществляется как с использованием средств автоматизации, так и без использования таких средств (на бумажных носителях).</p>
+
+<p style="margin-top: 15px;"><strong>5. Срок действия согласия:</strong></p>
+<p class="indent">Настоящее согласие действует с момента его предоставления до момента его отзыва. Согласие может быть отозвано мной в любое время путём направления письменного уведомления на адрес электронной почты Оператора: chargeback2022ru@gmail.com. Отзыв вступает в силу в течение 10 (десяти) рабочих дней с момента получения уведомления.</p>
+
+<p style="margin-top: 15px;"><strong>6. Передача данных:</strong></p>
+<p class="indent">Я уведомлен(а), что Оператор может передавать мои персональные данные третьим лицам исключительно в целях исполнения договора оказания услуг (банковским учреждениям, платёжным системам) и только с моего дополнительного согласия в каждом конкретном случае.</p>
+
+<p style="margin-top: 40px;">Дата: «______» ______________________ 202__ г.</p>
+<p style="margin-top: 15px;">Подпись: _____________________ / <span class="field" style="min-width:200px;"></span> /</p>
+
+<div style="margin-top: 40px;">
+  <div class="rect-stamp"><span>Форма утверждена</span></div>
+  <div class="stamp-circle">
+    <div class="inner">
+      <div class="stamp-text">Chargeback</div>
+      <div class="stamp-text">Consulting</div>
+      <div class="stamp-num">★ CB-2022 ★</div>
+      <div class="stamp-text" style="font-size:7px; margin-top:2px;">Персональные данные</div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
