@@ -11,22 +11,22 @@ const AboutSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex items-center gap-3 mb-6">
+          <div className="flex items-center justify-center gap-3 mb-6">
             <div className="h-px w-8 line-navy" />
             <span className="text-navy-light text-sm tracking-[0.2em] uppercase font-body">
               О нас
             </span>
             <div className="h-px w-8 line-navy" />
           </div>
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-center">
             Кто мы и чем занимаемся
           </h2>
-          <p className="text-muted-foreground font-body text-lg leading-relaxed mb-8">
+          <p className="text-muted-foreground font-body text-lg leading-relaxed mb-8 text-center">
             Chargeback — это команда специалистов в сфере финансового консалтинга, 
             специализирующаяся на возврате денежных средств через процедуру Chargeback. 
             Мы помогаем физическим и юридическим лицам вернуть деньги, списанные без согласия, 
             за неоказанные услуги или некачественные товары. Работаем с 2022 года, 
-            за это время успешно закрыли более 500 кейсов.
+            за это время успешно закрыли более 3 200 кейсов.
           </p>
         </motion.div>
 
@@ -34,7 +34,7 @@ const AboutSection = () => {
           {[
             { icon: Target, title: "Наша миссия", text: "Защитить права клиентов и вернуть их деньги законным путём через банковские процедуры" },
             { icon: Users, title: "Команда", text: "Финансовые аналитики, специалисты по платёжным системам и эксперты по Chargeback" },
-            { icon: TrendingUp, title: "Результаты", text: "92% успешных возвратов, средний срок — 45 дней, более 500 закрытых кейсов" },
+            { icon: TrendingUp, title: "Результаты", text: "92% успешных возвратов, средний срок — 45 дней, более 3 200 закрытых кейсов" },
             { icon: Globe, title: "География", text: "Работаем со всеми странами, поддерживаем Visa, Mastercard и криптовалютные переводы" },
           ].map((item, i) => (
             <motion.div

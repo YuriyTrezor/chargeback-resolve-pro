@@ -5,8 +5,8 @@ const badges = [
   { icon: Lock, label: "SSL / HTTPS", desc: "Защищённое соединение" },
   { icon: Shield, label: "PCI DSS", desc: "Стандарт безопасности данных" },
   { icon: CreditCard, label: "Visa / Mastercard", desc: "Партнёрство с платёжными системами" },
-  { icon: Award, label: "3+ года опыта", desc: "На рынке с 2022 года" },
-  { icon: BadgeCheck, label: "500+ кейсов", desc: "Успешно закрытых дел" },
+  { icon: Award, label: "4+ года на рынке РФ", desc: "На рынке с 2022 года" },
+  { icon: BadgeCheck, label: "3200+ кейсов", desc: "2–3 возврата каждый день" },
   { icon: Star, label: "92% успеха", desc: "Средний показатель возврата" },
 ];
 

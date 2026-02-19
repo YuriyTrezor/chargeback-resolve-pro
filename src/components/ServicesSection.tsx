@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Banknote, BarChart3, ShieldCheck, FileSearch, Bitcoin } from "lucide-react";
+import { Banknote, BarChart3, ShieldCheck, FileSearch, Bitcoin, LineChart } from "lucide-react";
 
 const services = [
   {
@@ -26,6 +26,11 @@ const services = [
     icon: ShieldCheck,
     title: "Полное сопровождение",
     description: "Полное сопровождение Ваших средств от момента обращения до получения денег.",
+  },
+  {
+    icon: BarChart3,
+    title: "Анализ транзакций",
+    description: "Детальный разбор всех операций, выявление подозрительных списаний и формирование доказательной базы для возврата.",
   },
 ];
 

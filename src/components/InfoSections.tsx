@@ -8,11 +8,11 @@ import {
 } from "lucide-react";
 
 const useCases = [
-  { icon: Package, text: "Товар или услуга не были предоставлены" },
-  { icon: AlertCircle, text: "Списание произошло без согласия владельца карты" },
-  { icon: FileX, text: "Полученный продукт существенно отличается от заявленного" },
-  { icon: FileText, text: "Были нарушены условия договора" },
-  { icon: Copy, text: "Произошло двойное списание" },
+  { icon: Package, text: "Брокер не вывел средства или заблокировал счёт без оснований" },
+  { icon: AlertCircle, text: "Списание произошло без согласия владельца карты в пользу финансовой платформы" },
+  { icon: FileX, text: "Инвестиционная компания предоставила ложные гарантии доходности" },
+  { icon: FileText, text: "Были нарушены условия договора с брокером или финансовым посредником" },
+  { icon: Copy, text: "Произошло повторное или скрытое списание комиссий финансовой организацией" },
 ];
 
 const steps = [
@@ -48,17 +48,17 @@ const InfoSections = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <div className="h-px w-8 line-navy" />
               <span className="text-navy-light text-sm tracking-[0.2em] uppercase font-body">
                 Применение
               </span>
               <div className="h-px w-8 line-navy" />
             </div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-8 text-center">
               Когда применяется Chargeback
             </h2>
-            <p className="text-muted-foreground font-body text-lg mb-8">
+            <p className="text-muted-foreground font-body text-lg mb-8 text-center">
               Процедура используется в случаях, когда:
             </p>
             <div className="space-y-4">
@@ -89,14 +89,14 @@ const InfoSections = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex items-center gap-3 mb-6">
+            <div className="flex items-center justify-center gap-3 mb-6">
               <div className="h-px w-8 line-navy" />
               <span className="text-navy-light text-sm tracking-[0.2em] uppercase font-body">
                 Процесс
               </span>
               <div className="h-px w-8 line-navy" />
             </div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-8 text-center">
               Как это работает
             </h2>
             <div className="space-y-5">
@@ -133,7 +133,7 @@ const InfoSections = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-8">
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-8 text-center">
               Почему это надёжно
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -248,7 +248,9 @@ const InfoSections = () => {
               Главное — действовать своевременно и корректно оформить обращение.
             </p>
             <a
-              href="#contact"
+              href="https://t.me/Chargeback_Guardian"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
             >
               Получить консультацию
