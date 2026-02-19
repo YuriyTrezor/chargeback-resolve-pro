@@ -21,13 +21,14 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-3xl"
+          className="max-w-3xl mx-auto text-center"
         >
-          <div className="flex items-center gap-3 mb-8">
+          <div className="flex items-center justify-center gap-3 mb-8">
             <div className="h-px w-12 bg-primary-foreground/30" />
             <span className="text-primary-foreground/70 font-body text-sm tracking-[0.2em] uppercase">
               Chargeback
             </span>
+            <div className="h-px w-12 bg-primary-foreground/30" />
           </div>
 
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-primary-foreground">
@@ -38,15 +39,17 @@ const HeroSection = () => {
             возврата средств
           </h1>
 
-          <p className="text-primary-foreground/70 text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-body">
+          <p className="text-primary-foreground/70 text-lg md:text-xl max-w-xl mx-auto mb-10 leading-relaxed font-body">
             Chargeback — это официальная банковская процедура, позволяющая оспорить 
             ранее совершённый платёж и вернуть деньги, если услуга не была оказана, 
             товар не получен или условия сделки были нарушены.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
             <a
-              href="#contact"
+              href="https://t.me/Chargeback_Guardian"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
             >
               Бесплатная консультация
@@ -64,7 +67,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-lg mx-auto"
         >
           {stats.map((stat) => (
             <div
