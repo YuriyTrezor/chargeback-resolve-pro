@@ -30,7 +30,9 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="#contact"
+            href="https://t.me/Chargeback_2022"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-5 py-2 bg-cta text-cta-foreground font-body text-sm font-semibold rounded-md hover:opacity-90 transition-opacity"
           >
             Консультация
@@ -59,7 +61,9 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="#contact"
+              href="https://t.me/Chargeback_2022"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="px-5 py-2 bg-cta text-cta-foreground font-body text-sm font-semibold rounded-md text-center hover:opacity-90 transition-opacity"
             >
