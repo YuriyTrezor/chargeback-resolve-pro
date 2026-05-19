@@ -146,7 +146,7 @@ const ContactFooter = () => {
 
       <footer className="py-12 border-t border-border bg-primary">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
             <div>
               <div className="font-display text-2xl font-bold text-primary-foreground mb-3">
                 Chargeback
@@ -155,26 +155,6 @@ const ContactFooter = () => {
                 Профессиональный финансовый консалтинг.
                 Защита ваших интересов — наш приоритет.
               </p>
-            </div>
-            <div>
-              <div className="font-body font-semibold mb-3 text-primary-foreground">Контакты</div>
-              <div className="text-primary-foreground/60 font-body text-sm space-y-1">
-                <p>
-                  <a href="mailto:chargeback2022ru@gmail.com" className="hover:text-primary-foreground transition-colors">
-                    chargeback2022ru@gmail.com
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href="https://t.me/Chargeback_2022"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-primary-foreground transition-colors"
-                  >
-                    Telegram: @Chargeback_2022
-                  </a>
-                </p>
-              </div>
             </div>
             <div>
               <div className="font-body font-semibold mb-3 text-primary-foreground">Правовая информация</div>
