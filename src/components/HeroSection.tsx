@@ -47,7 +47,7 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
             <a
-              href="https://t.me/Chargeback_2022"
+              href="https://t.me/Annak005"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
@@ -55,7 +55,7 @@ const HeroSection = () => {
               Бесплатная консультация
             </a>
             <a
-              href="https://max.ru/u/f9LHodD0cOJUE7hx1DQDtMKLWkJV-OtVn834RkVcrxac9K-YV6BfVKzEpj8"
+              href="https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
