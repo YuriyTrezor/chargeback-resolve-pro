@@ -37,6 +37,14 @@ const Navbar = () => {
           >
             Консультация
           </a>
+          <a
+            href="https://max.ru/u/f9LHodD0cOJUE7hx1DQDtMKLWkJV-OtVn834RkVcrxac9K-YV6BfVKzEpj8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-5 py-2 bg-cta text-cta-foreground font-body text-sm font-semibold rounded-md hover:opacity-90 transition-opacity"
+          >
+            MAX
+          </a>
         </div>
 
         <button
@@ -68,6 +76,15 @@ const Navbar = () => {
               className="px-5 py-2 bg-cta text-cta-foreground font-body text-sm font-semibold rounded-md text-center hover:opacity-90 transition-opacity"
             >
               Консультация
+            </a>
+            <a
+              href="https://max.ru/u/f9LHodD0cOJUE7hx1DQDtMKLWkJV-OtVn834RkVcrxac9K-YV6BfVKzEpj8"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setOpen(false)}
+              className="px-5 py-2 bg-cta text-cta-foreground font-body text-sm font-semibold rounded-md text-center hover:opacity-90 transition-opacity"
+            >
+              MAX
             </a>
           </div>
         </div>

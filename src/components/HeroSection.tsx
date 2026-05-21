@@ -55,6 +55,14 @@ const HeroSection = () => {
               Бесплатная консультация
             </a>
             <a
+              href="https://max.ru/u/f9LHodD0cOJUE7hx1DQDtMKLWkJV-OtVn834RkVcrxac9K-YV6BfVKzEpj8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
+            >
+              Написать в MAX
+            </a>
+            <a
               href="#services"
               className="inline-flex items-center justify-center px-8 py-4 border border-primary-foreground/20 text-primary-foreground font-body font-medium rounded-md hover:bg-primary-foreground/5 transition-colors"
             >
