@@ -131,6 +131,20 @@ const ContactFooter = () => {
                 </div>
               </div>
               <div className="flex items-start gap-4">
+                <Send className="w-6 h-6 text-navy shrink-0 mt-1" />
+                <div>
+                  <div className="font-body font-semibold mb-1 text-foreground">MAX</div>
+                  <a
+                    href="https://max.ru/u/f9LHodD0cOJUE7hx1DQDtMKLWkJV-OtVn834RkVcrxac9K-YV6BfVKzEpj8"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground font-body text-sm hover:text-navy transition-colors underline break-all"
+                  >
+                    Написать в MAX
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
                 <Clock className="w-6 h-6 text-navy shrink-0 mt-1" />
                 <div>
                   <div className="font-body font-semibold mb-1 text-foreground">Режим работы</div>
