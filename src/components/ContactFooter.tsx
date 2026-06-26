@@ -132,19 +132,19 @@ const ContactFooter = () => {
 
       <footer className="py-12 border-t border-border bg-primary">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+          <div className="flex flex-col items-center text-center gap-8 mb-10">
             <div>
               <div className="font-display text-2xl font-bold text-primary-foreground mb-3">
                 Chargeback
               </div>
-              <p className="text-primary-foreground/60 font-body text-sm leading-relaxed">
+              <p className="text-primary-foreground/60 font-body text-sm leading-relaxed max-w-md mx-auto">
                 Профессиональный финансовый консалтинг.
                 Защита ваших интересов — наш приоритет.
               </p>
             </div>
             <div>
               <div className="font-body font-semibold mb-3 text-primary-foreground">Правовая информация</div>
-              <div className="text-primary-foreground/60 font-body text-sm space-y-2">
+              <div className="text-primary-foreground/60 font-body text-sm space-y-2 flex flex-col items-center">
                 <a href="/docs/privacy.html" target="_blank" className="block hover:text-primary-foreground transition-colors">
                   Политика конфиденциальности
                 </a>
