@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { Mail, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import avatarYuriy from "@/assets/avatar-alexey.png.asset.json";
+import avatarAnna from "@/assets/avatar-elena.png.asset.json";
 
 const ContactFooter = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
@@ -104,6 +106,52 @@ const ContactFooter = () => {
               transition={{ duration: 0.6 }}
               className="space-y-8"
             >
+            <div className="p-5 rounded-lg bg-card border border-border shadow-soft">
+              <div className="font-body font-semibold text-foreground mb-4">Ваши персональные менеджеры</div>
+              <div className="space-y-4">
+                <a
+                  href="https://t.me/yuriy_romanov_fin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 group"
+                >
+                  <img
+                    src={avatarYuriy.url}
+                    alt="Юрий Романов"
+                    className="w-14 h-14 rounded-full object-cover border-2 border-navy/10 shrink-0"
+                    loading="lazy"
+                  />
+                  <div className="min-w-0">
+                    <div className="font-body font-semibold text-foreground group-hover:text-navy transition-colors">
+                      Юрий Романов
+                    </div>
+                    <div className="text-xs text-muted-foreground font-body">Старший менеджер · Telegram</div>
+                    <div className="text-sm text-navy font-body">@yuriy_romanov_fin</div>
+                  </div>
+                </a>
+                <a
+                  href="https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 group"
+                >
+                  <img
+                    src={avatarAnna.url}
+                    alt="Анна К."
+                    className="w-14 h-14 rounded-full object-cover border-2 border-navy/10 shrink-0"
+                    loading="lazy"
+                  />
+                  <div className="min-w-0">
+                    <div className="font-body font-semibold text-foreground group-hover:text-navy transition-colors">
+                      Анна К.
+                    </div>
+                    <div className="text-xs text-muted-foreground font-body">Менеджер по работе с клиентами · MAX</div>
+                    <div className="text-sm text-navy font-body">Написать в MAX</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
               <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-navy shrink-0 mt-1" />
                 <div>
