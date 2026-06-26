@@ -41,8 +41,9 @@ const Navbar = () => {
             href="https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 bg-cta text-cta-foreground font-body text-sm font-semibold rounded-md hover:opacity-90 transition-opacity"
+            className="inline-flex items-center gap-1.5 px-5 py-2 bg-cta text-cta-foreground font-body text-sm font-semibold rounded-md hover:opacity-90 transition-opacity"
           >
+            <span className="flex items-center justify-center w-5 h-5 rounded bg-white text-cta text-[11px] font-black leading-none" aria-hidden="true">M</span>
             MAX
           </a>
         </div>
@@ -82,8 +83,9 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="px-5 py-2 bg-cta text-cta-foreground font-body text-sm font-semibold rounded-md text-center hover:opacity-90 transition-opacity"
+              className="inline-flex items-center justify-center gap-1.5 px-5 py-2 bg-cta text-cta-foreground font-body text-sm font-semibold rounded-md hover:opacity-90 transition-opacity"
             >
+              <span className="flex items-center justify-center w-5 h-5 rounded bg-white text-cta text-[11px] font-black leading-none" aria-hidden="true">M</span>
               MAX
             </a>
           </div>

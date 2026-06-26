@@ -97,9 +97,7 @@ const ManagersSection = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg bg-navy text-white font-body text-sm font-semibold hover:bg-navy/90 transition-colors"
                 >
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm4.7 7.3l-2.2 7.4c-.2.5-.6.6-1 .4l-2.7-2-1.3 1.2c-.2.2-.3.3-.5.3l.2-2.7 5-4.5c.2-.2 0-.3-.3-.1l-6.2 3.9-2.7-.8c-.6-.2-.6-.6.1-.9l10.5-4c.5-.2 1 .1.9.8z"/>
-                  </svg>
+                  <span className="flex items-center justify-center w-5 h-5 rounded bg-white text-navy text-[11px] font-black leading-none" aria-hidden="true">M</span>
                   Написать в MAX
                 </a>
                 <a
