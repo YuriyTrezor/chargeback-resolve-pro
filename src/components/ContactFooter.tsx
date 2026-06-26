@@ -132,26 +132,48 @@ const ContactFooter = () => {
 
       <footer className="py-12 border-t border-border bg-primary">
         <div className="container">
-          <div className="flex flex-col items-center text-center gap-8 mb-10">
-            <div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+            <div className="md:col-span-1">
               <div className="font-display text-2xl font-bold text-primary-foreground mb-3">
                 Chargeback
               </div>
-              <p className="text-primary-foreground/60 font-body text-sm leading-relaxed max-w-md mx-auto">
-                Профессиональный финансовый консалтинг.
-                Защита ваших интересов — наш приоритет.
+              <p className="text-primary-foreground/60 font-body text-sm leading-relaxed">
+                Профессиональный финансовый консалтинг. Защита ваших интересов — наш приоритет.
               </p>
             </div>
             <div>
-              <div className="font-body font-semibold mb-3 text-primary-foreground">Правовая информация</div>
-              <div className="text-primary-foreground/60 font-body text-sm space-y-2 flex flex-col items-center">
-                <a href="/docs/privacy.html" target="_blank" className="block hover:text-primary-foreground transition-colors">
-                  Политика конфиденциальности
-                </a>
-                <a href="/docs/oferta.html" target="_blank" className="block hover:text-primary-foreground transition-colors">
-                  Публичная оферта
-                </a>
-              </div>
+              <div className="font-body font-semibold mb-4 text-primary-foreground">Правовая информация</div>
+              <ul className="text-primary-foreground/60 font-body text-sm space-y-2">
+                <li><a href="/docs/privacy.html" target="_blank" className="hover:text-primary-foreground transition-colors">Политика конфиденциальности</a></li>
+                <li><a href="/docs/oferta.html" target="_blank" className="hover:text-primary-foreground transition-colors">Публичная оферта</a></li>
+                <li><a href="/docs/dogovor.html" target="_blank" className="hover:text-primary-foreground transition-colors">Договор оказания услуг</a></li>
+                <li><a href="/docs/consent.html" target="_blank" className="hover:text-primary-foreground transition-colors">Согласие на обработку ПДн</a></li>
+              </ul>
+            </div>
+            <div>
+              <div className="font-body font-semibold mb-4 text-primary-foreground">Документы</div>
+              <ul className="text-primary-foreground/60 font-body text-sm space-y-2">
+                <li><a href="/docs/license.html" target="_blank" className="hover:text-primary-foreground transition-colors">Лицензии и сертификаты</a></li>
+                <li><a href="/docs/requisites.html" target="_blank" className="hover:text-primary-foreground transition-colors">Реквизиты компании</a></li>
+                <li><a href="#faq" className="hover:text-primary-foreground transition-colors">Часто задаваемые вопросы</a></li>
+                <li><a href="#about" className="hover:text-primary-foreground transition-colors">О компании</a></li>
+              </ul>
+            </div>
+            <div>
+              <div className="font-body font-semibold mb-4 text-primary-foreground">Контакты</div>
+              <ul className="text-primary-foreground/60 font-body text-sm space-y-2">
+                <li>
+                  <a href="mailto:chargeback2022ru@gmail.com" className="hover:text-primary-foreground transition-colors break-all">
+                    chargeback2022ru@gmail.com
+                  </a>
+                </li>
+                <li>Пн — Пт: 10:00 — 20:00 (МСК)</li>
+                <li>
+                  <a href="https://t.me/yuriy_romanov_fin" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
+                    Telegram: @yuriy_romanov_fin
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <div className="h-px bg-primary-foreground/10 mb-6" />
