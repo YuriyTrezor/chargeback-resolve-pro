@@ -3,6 +3,7 @@ import { Send } from "lucide-react";
 import avatarYuriy from "@/assets/avatar-alexey.png.asset.json";
 import avatarAnna from "@/assets/avatar-elena.png.asset.json";
 import avatarMaria from "@/assets/avatar-maria.jpg.asset.json";
+import maxLogo from "@/assets/max-logo.png.asset.json";
 
 const managers = [
   {
@@ -97,7 +98,7 @@ const ManagersSection = () => {
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg bg-navy text-white font-body text-sm font-semibold hover:bg-navy/90 transition-colors"
                 >
-                  <span className="flex items-center justify-center w-5 h-5 rounded bg-white text-navy text-[11px] font-black leading-none" aria-hidden="true">M</span>
+                  <img src={maxLogo.url} alt="" className="w-5 h-5 rounded bg-white p-0.5" />
                   Написать в MAX
                 </a>
                 <a
