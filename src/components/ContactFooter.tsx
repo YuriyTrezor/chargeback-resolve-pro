@@ -46,6 +46,80 @@ const ContactFooter = () => {
             </p>
           </motion.div>
 
+          {/* Managers — full-width 3 columns */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16"
+          >
+            {[
+              {
+                name: "Анна Крылова",
+                role: "Ведущий специалист по chargeback",
+                avatar: avatarAnna.url,
+                max: "https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw",
+                tg: null as string | null,
+                tgHandle: null as string | null,
+              },
+              {
+                name: "Юрий Романов",
+                role: "Финансовый аналитик · возврат средств",
+                avatar: avatarYuriy.url,
+                max: null,
+                tg: "https://t.me/yuriy_romanov_fin",
+                tgHandle: "@yuriy_romanov_fin",
+              },
+              {
+                name: "Полина Тарасова",
+                role: "Специалист по работе с банками и платёжными системами",
+                avatar: avatarMaria.url,
+                max: null,
+                tg: "https://t.me/pol008t",
+                tgHandle: "@pol008t",
+              },
+            ].map((m) => (
+              <div
+                key={m.name}
+                className="p-6 rounded-lg bg-card border border-border shadow-soft flex flex-col items-center text-center"
+              >
+                <img
+                  src={m.avatar}
+                  alt={m.name}
+                  className="w-24 h-24 rounded-full object-cover border-2 border-navy/10 mb-4"
+                  loading="lazy"
+                />
+                <div className="font-body font-semibold text-foreground text-lg">{m.name}</div>
+                <div className="text-xs text-muted-foreground font-body mt-1 mb-4 min-h-[2.5rem]">
+                  {m.role}
+                </div>
+                <div className="w-full space-y-2 mt-auto">
+                  {m.max && (
+                    <a
+                      href={m.max}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full px-4 py-2 rounded-md bg-navy/5 hover:bg-navy/10 text-navy font-body text-sm font-medium transition-colors"
+                    >
+                      MAX · Написать
+                    </a>
+                  )}
+                  {m.tg && (
+                    <a
+                      href={m.tg}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full px-4 py-2 rounded-md bg-navy/5 hover:bg-navy/10 text-navy font-body text-sm font-medium transition-colors"
+                    >
+                      Telegram · {m.tgHandle}
+                    </a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </motion.div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <motion.form
               initial={{ opacity: 0, x: -20 }}
@@ -107,72 +181,6 @@ const ContactFooter = () => {
               transition={{ duration: 0.6 }}
               className="space-y-8"
             >
-            <div className="p-5 rounded-lg bg-card border border-border shadow-soft">
-              <div className="font-body font-semibold text-foreground mb-4">Ваши персональные менеджеры</div>
-              <div className="space-y-4">
-                <a
-                  href="https://t.me/yuriy_romanov_fin"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 group"
-                >
-                  <img
-                    src={avatarYuriy.url}
-                    alt="Юрий Романов"
-                    className="w-14 h-14 rounded-full object-cover border-2 border-navy/10 shrink-0"
-                    loading="lazy"
-                  />
-                  <div className="min-w-0">
-                    <div className="font-body font-semibold text-foreground group-hover:text-navy transition-colors">
-                      Юрий Романов
-                    </div>
-                    <div className="text-xs text-muted-foreground font-body">Старший менеджер · Telegram</div>
-                    <div className="text-sm text-navy font-body">@yuriy_romanov_fin</div>
-                  </div>
-                </a>
-                <a
-                  href="https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 group"
-                >
-                  <img
-                    src={avatarAnna.url}
-                    alt="Анна К."
-                    className="w-14 h-14 rounded-full object-cover border-2 border-navy/10 shrink-0"
-                    loading="lazy"
-                  />
-                  <div className="min-w-0">
-                    <div className="font-body font-semibold text-foreground group-hover:text-navy transition-colors">
-                      Анна К.
-                    </div>
-                    <div className="text-xs text-muted-foreground font-body">Менеджер по работе с клиентами · MAX</div>
-                    <div className="text-sm text-navy font-body">Написать в MAX</div>
-                  </div>
-                </a>
-                <a
-                  href="https://t.me/pol008t"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 group"
-                >
-                  <img
-                    src={avatarMaria.url}
-                    alt="Полина Тарасова"
-                    className="w-14 h-14 rounded-full object-cover border-2 border-navy/10 shrink-0"
-                    loading="lazy"
-                  />
-                  <div className="min-w-0">
-                    <div className="font-body font-semibold text-foreground group-hover:text-navy transition-colors">
-                      Полина Тарасова
-                    </div>
-                    <div className="text-xs text-muted-foreground font-body">Менеджер по работе с клиентами · Telegram</div>
-                    <div className="text-sm text-navy font-body">@pol008t</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
               <div className="flex items-start gap-4">
                 <Mail className="w-6 h-6 text-navy shrink-0 mt-1" />
                 <div>
