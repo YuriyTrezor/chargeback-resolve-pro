@@ -248,7 +248,7 @@ const InfoSections = () => {
               Главное — действовать своевременно и корректно оформить обращение.
             </p>
             <a
-              href="https://t.me/Annak005"
+              href="https://t.me/yuriy_romanov_fin"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"

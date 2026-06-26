@@ -30,7 +30,7 @@ const Navbar = () => {
             </a>
           ))}
           <a
-            href="https://t.me/Annak005"
+            href="https://t.me/yuriy_romanov_fin"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2 bg-cta text-cta-foreground font-body text-sm font-semibold rounded-md hover:opacity-90 transition-opacity"
@@ -69,7 +69,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://t.me/Annak005"
+              href="https://t.me/yuriy_romanov_fin"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}

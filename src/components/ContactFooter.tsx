@@ -121,12 +121,12 @@ const ContactFooter = () => {
                 <div>
                   <div className="font-body font-semibold mb-1 text-foreground">Telegram</div>
                   <a
-                    href="https://t.me/Annak005"
+                    href="https://t.me/yuriy_romanov_fin"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted-foreground font-body text-sm hover:text-navy transition-colors underline"
                   >
-                    @Annak005
+                    @yuriy_romanov_fin
                   </a>
                 </div>
               </div>
