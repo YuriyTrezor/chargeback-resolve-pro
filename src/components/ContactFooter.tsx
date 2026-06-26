@@ -1,10 +1,7 @@
 import { motion } from "framer-motion";
-import { Mail, Clock, Send } from "lucide-react";
+import { Mail, Clock } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import avatarYuriy from "@/assets/avatar-alexey.png.asset.json";
-import avatarAnna from "@/assets/avatar-elena.png.asset.json";
-import avatarMaria from "@/assets/avatar-maria.jpg.asset.json";
 
 const ContactFooter = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
