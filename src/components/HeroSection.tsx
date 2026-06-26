@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { TrendingUp, Percent } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import maxLogo from "@/assets/max-logo.png.asset.json";
 
 const stats = [
   { value: "92.3%", label: "Возврат вложенных средств", icon: TrendingUp },

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import maxLogo from "@/assets/max-logo.png.asset.json";
 
 const links = [
   { href: "#about", label: "О нас" },
