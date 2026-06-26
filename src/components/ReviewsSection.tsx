@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import avatarAlexey from "@/assets/avatar-alexey.png.asset.json";
+import avatarElena from "@/assets/avatar-elena.png.asset.json";
 
 const reviews = [
   {
@@ -7,12 +9,14 @@ const reviews = [
     text: "Обратился после того, как перевёл деньги на платформу, которая оказалась мошеннической. Ребята помогли собрать все доказательства и подали заявление в банк. Через 2 месяца деньги вернулись на карту. Огромное спасибо!",
     amount: "185 000 ₽",
     days: 58,
+    avatar: avatarAlexey.url,
   },
   {
     name: "Елена К.",
     text: "Списали деньги за услугу, которую я не заказывала. Банк сначала отказал, но после подключения Chargeback Consulting процесс пошёл. Вернули всю сумму. Рекомендую всем!",
     amount: "42 000 ₽",
     days: 35,
+    avatar: avatarElena.url,
   },
   {
     name: "Дмитрий С.",
@@ -73,7 +77,21 @@ const ReviewsSection = () => {
               transition={{ duration: 0.5, delay: i * 0.08 }}
               className="p-6 rounded-lg bg-background border border-border shadow-soft flex flex-col"
             >
-              <Quote className="w-6 h-6 text-navy/30 mb-3" />
+              <div className="flex items-center gap-3 mb-3">
+                {r.avatar ? (
+                  <img
+                    src={r.avatar}
+                    alt={r.name}
+                    className="w-12 h-12 rounded-full object-cover border-2 border-navy/10"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-12 h-12 rounded-full bg-navy/10 flex items-center justify-center font-display text-navy font-bold">
+                    {r.name.charAt(0)}
+                  </div>
+                )}
+                <Quote className="w-6 h-6 text-navy/30 ml-auto" />
+              </div>
               <p className="text-muted-foreground font-body text-sm leading-relaxed flex-1 mb-4">
                 {r.text}
               </p>
