@@ -3,6 +3,7 @@ import { Send } from "lucide-react";
 import avatarYuriy from "@/assets/avatar-alexey.png.asset.json";
 import avatarAnna from "@/assets/avatar-elena.png.asset.json";
 import avatarMaria from "@/assets/avatar-maria.jpg.asset.json";
+import maxLogo from "@/assets/max-logo.png.asset.json";
 
 const managers = [
   {

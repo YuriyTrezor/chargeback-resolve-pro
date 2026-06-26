@@ -60,7 +60,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
             >
-              <span className="flex items-center justify-center w-6 h-6 rounded bg-white text-cta text-[13px] font-black leading-none" aria-hidden="true">M</span>
+              <img src={maxLogo.url} alt="" className="w-6 h-6 rounded bg-white p-0.5" />
               Написать в MAX
             </a>
             <a
