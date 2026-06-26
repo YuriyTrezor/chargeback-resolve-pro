@@ -58,63 +58,74 @@ const ContactFooter = () => {
               {
                 name: "Анна Крылова",
                 role: "Ведущий специалист по chargeback",
+                bio: "Сопровождает клиентов с момента обращения до возврата средств. Готовит claim в банк, формирует доказательную базу и контролирует сроки рассмотрения по правилам Visa и Mastercard.",
                 avatar: avatarAnna.url,
                 max: "https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw",
-                tg: null as string | null,
-                tgHandle: null as string | null,
+                tg: "https://t.me/Annak005",
+                tgHandle: "@Annak005",
               },
               {
                 name: "Юрий Романов",
                 role: "Финансовый аналитик · возврат средств",
+                bio: "Анализирует транзакции, выявляет основания для возврата и просчитывает шансы по каждому делу. Работает с международными платёжными системами и арбитражными процедурами.",
                 avatar: avatarYuriy.url,
-                max: null,
+                max: "https://max.ru/u/f9LHodD0cOLFl01v9AIPPRfD4wMJOjlXb8HnBN2J8R93tlN58_xtK7s_wfQ",
                 tg: "https://t.me/yuriy_romanov_fin",
                 tgHandle: "@yuriy_romanov_fin",
               },
               {
                 name: "Полина Тарасова",
-                role: "Специалист по работе с банками и платёжными системами",
+                role: "Специалист по работе с банками",
+                bio: "Ведёт переговоры с банками-эмитентами, готовит претензии и сопровождает клиента на всех этапах диспута. Помогает быстро собрать пакет документов для подачи заявления.",
                 avatar: avatarMaria.url,
-                max: null,
+                max: "https://max.ru/u/f9LHodD0cOKTuyJ3w74xKB69rCiPNZgZG-hyzh4vhmhT1E2ByR507gqcIzA",
                 tg: "https://t.me/pol008t",
                 tgHandle: "@pol008t",
               },
             ].map((m) => (
               <div
                 key={m.name}
-                className="p-6 rounded-lg bg-card border border-border shadow-soft flex flex-col items-center text-center"
+                className="group relative p-7 rounded-2xl bg-card border border-border shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all duration-300 flex flex-col items-center text-center overflow-hidden"
               >
-                <img
-                  src={m.avatar}
-                  alt={m.name}
-                  className="w-24 h-24 rounded-full object-cover border-2 border-navy/10 mb-4"
-                  loading="lazy"
-                />
-                <div className="font-body font-semibold text-foreground text-lg">{m.name}</div>
-                <div className="text-xs text-muted-foreground font-body mt-1 mb-4 min-h-[2.5rem]">
+                <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-navy/5 to-transparent pointer-events-none" />
+                <div className="relative mb-5">
+                  <div className="absolute inset-0 rounded-full bg-navy/10 blur-xl scale-110 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <img
+                    src={m.avatar}
+                    alt={m.name}
+                    className="relative w-28 h-28 rounded-full object-cover ring-4 ring-background shadow-md"
+                    loading="lazy"
+                  />
+                  <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-green-500 ring-4 ring-card" title="Онлайн" />
+                </div>
+                <div className="font-display font-bold text-foreground text-xl mb-1">{m.name}</div>
+                <div className="text-xs uppercase tracking-wider text-navy font-body font-semibold mb-3">
                   {m.role}
                 </div>
-                <div className="w-full space-y-2 mt-auto">
-                  {m.max && (
-                    <a
-                      href={m.max}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full px-4 py-2 rounded-md bg-navy/5 hover:bg-navy/10 text-navy font-body text-sm font-medium transition-colors"
-                    >
-                      MAX · Написать
-                    </a>
-                  )}
-                  {m.tg && (
-                    <a
-                      href={m.tg}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block w-full px-4 py-2 rounded-md bg-navy/5 hover:bg-navy/10 text-navy font-body text-sm font-medium transition-colors"
-                    >
-                      Telegram · {m.tgHandle}
-                    </a>
-                  )}
+                <p className="text-sm text-muted-foreground font-body leading-relaxed mb-6 flex-1">
+                  {m.bio}
+                </p>
+                <div className="w-full space-y-2.5 mt-auto">
+                  <a
+                    href={m.max}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg bg-navy text-white font-body text-sm font-semibold hover:bg-navy/90 transition-colors"
+                  >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                      <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm4.7 7.3l-2.2 7.4c-.2.5-.6.6-1 .4l-2.7-2-1.3 1.2c-.2.2-.3.3-.5.3l.2-2.7 5-4.5c.2-.2 0-.3-.3-.1l-6.2 3.9-2.7-.8c-.6-.2-.6-.6.1-.9l10.5-4c.5-.2 1 .1.9.8z"/>
+                    </svg>
+                    Написать в MAX
+                  </a>
+                  <a
+                    href={m.tg}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg border-2 border-navy/20 text-navy font-body text-sm font-semibold hover:bg-navy/5 hover:border-navy/40 transition-colors"
+                  >
+                    <Send className="w-4 h-4" />
+                    Telegram · {m.tgHandle}
+                  </a>
                 </div>
               </div>
             ))}
@@ -190,34 +201,6 @@ const ContactFooter = () => {
                     className="text-muted-foreground font-body text-sm hover:text-navy transition-colors underline"
                   >
                     chargeback2022ru@gmail.com
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Send className="w-6 h-6 text-navy shrink-0 mt-1" />
-                <div>
-                  <div className="font-body font-semibold mb-1 text-foreground">Telegram</div>
-                  <a
-                    href="https://t.me/yuriy_romanov_fin"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground font-body text-sm hover:text-navy transition-colors underline"
-                  >
-                    @yuriy_romanov_fin
-                  </a>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <Send className="w-6 h-6 text-navy shrink-0 mt-1" />
-                <div>
-                  <div className="font-body font-semibold mb-1 text-foreground">MAX</div>
-                  <a
-                    href="https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground font-body text-sm hover:text-navy transition-colors underline break-all"
-                  >
-                    Написать в MAX
                   </a>
                 </div>
               </div>
