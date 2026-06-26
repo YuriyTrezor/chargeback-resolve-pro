@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import avatarYuriy from "@/assets/avatar-alexey.png.asset.json";
 import avatarAnna from "@/assets/avatar-elena.png.asset.json";
+import avatarMaria from "@/assets/avatar-maria.jpg.asset.json";
 
 const ContactFooter = () => {
   const [formData, setFormData] = useState({ name: "", email: "", phone: "", message: "" });
@@ -144,6 +145,26 @@ const ContactFooter = () => {
                   <div className="min-w-0">
                     <div className="font-body font-semibold text-foreground group-hover:text-navy transition-colors">
                       Анна К.
+                    </div>
+                    <div className="text-xs text-muted-foreground font-body">Менеджер по работе с клиентами · MAX</div>
+                    <div className="text-sm text-navy font-body">Написать в MAX</div>
+                  </div>
+                </a>
+                <a
+                  href="https://max.ru/u/f9LHodD0cOKTuyJ3w74xKB69rCiPNZgZG-hyzh4vhmhT1E2ByR507gqcIzA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 group"
+                >
+                  <img
+                    src={avatarMaria.url}
+                    alt="Мария С."
+                    className="w-14 h-14 rounded-full object-cover border-2 border-navy/10 shrink-0"
+                    loading="lazy"
+                  />
+                  <div className="min-w-0">
+                    <div className="font-body font-semibold text-foreground group-hover:text-navy transition-colors">
+                      Мария С.
                     </div>
                     <div className="text-xs text-muted-foreground font-body">Менеджер по работе с клиентами · MAX</div>
                     <div className="text-sm text-navy font-body">Написать в MAX</div>
