@@ -180,9 +180,8 @@ const ContactFooter = () => {
             </div>
           </div>
           <div className="h-px bg-primary-foreground/10 mb-6" />
-          <div className="text-center text-primary-foreground/50 font-body text-xs space-y-1">
+          <div className="text-center text-primary-foreground/50 font-body text-xs">
             <p>© 2022–2026 Chargeback. Все права защищены.</p>
-            <p className="text-primary-foreground/30">Юридический адрес: 683031, г. Петропавловск-Камчатский, ул. Ленинская, д. 79, оф. 214</p>
           </div>
         </div>
       </footer>
