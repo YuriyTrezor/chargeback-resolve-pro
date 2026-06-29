@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import maxLogo from "@/assets/max-logo.png.asset.json";
 
 const links = [
   { href: "#about", label: "О нас" },
@@ -44,7 +43,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 px-5 py-2 bg-cta text-cta-foreground font-body text-sm font-semibold rounded-md hover:opacity-90 transition-opacity"
           >
-            <img src={maxLogo.url} alt="" className="w-5 h-5 rounded bg-white p-0.5" />
+            <span className="flex items-center justify-center w-5 h-5 rounded bg-white text-cta text-[11px] font-black leading-none" aria-hidden="true">M</span>
             MAX
           </a>
         </div>
@@ -86,7 +85,7 @@ const Navbar = () => {
               onClick={() => setOpen(false)}
               className="inline-flex items-center justify-center gap-1.5 px-5 py-2 bg-cta text-cta-foreground font-body text-sm font-semibold rounded-md hover:opacity-90 transition-opacity"
             >
-              <img src={maxLogo.url} alt="" className="w-5 h-5 rounded bg-white p-0.5" />
+              <span className="flex items-center justify-center w-5 h-5 rounded bg-white text-cta text-[11px] font-black leading-none" aria-hidden="true">M</span>
               MAX
             </a>
           </div>
