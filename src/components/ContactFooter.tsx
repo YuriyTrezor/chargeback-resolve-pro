@@ -173,6 +173,9 @@ const ContactFooter = () => {
                     Telegram: @yuriy_romanov_fin
                   </a>
                 </li>
+                <li className="text-primary-foreground/40 text-xs pt-1">
+                  683031, г. Петропавловск-Камчатский, ул. Ленинская, д. 79, оф. 214
+                </li>
               </ul>
             </div>
           </div>
