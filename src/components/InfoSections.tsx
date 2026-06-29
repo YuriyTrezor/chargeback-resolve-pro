@@ -248,12 +248,13 @@ const InfoSections = () => {
               Главное — действовать своевременно и корректно оформить обращение.
             </p>
             <a
-              href="https://t.me/yuriy_romanov_fin"
+              href="https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-cta text-cta-foreground font-body font-semibold rounded-md hover:opacity-90 transition-opacity"
             >
-              Получить консультацию
+              <span className="flex items-center justify-center w-6 h-6 rounded bg-white text-cta text-[13px] font-black leading-none" aria-hidden="true">M</span>
+              Получить консультацию (MAX · Анна)
             </a>
           </motion.div>
         </div>
