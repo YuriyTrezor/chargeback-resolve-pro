@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
-import avatarYuriy from "@/assets/avatar-alexey.png.asset.json";
-import avatarAnna from "@/assets/avatar-elena.png.asset.json";
-import avatarMaria from "@/assets/avatar-maria.jpg.asset.json";
+import avatarYuriy from "@/assets/avatars/yuriy.png";
+import avatarAnna from "@/assets/avatars/anna.png";
+import avatarMaria from "@/assets/avatars/polina.jpg";
 
 const managers = [
   {
     name: "Анна Крылова",
     role: "Ведущий специалист по chargeback",
     bio: "Сопровождает клиентов с момента обращения до возврата средств. Готовит claim в банк, формирует доказательную базу и контролирует сроки рассмотрения по правилам Visa и Mastercard.",
-    avatar: avatarAnna.url,
+    avatar: avatarAnna,
     max: "https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw",
     tg: "https://t.me/Annak005",
     tgHandle: "@Annak005",
@@ -18,7 +18,7 @@ const managers = [
     name: "Юрий Романов",
     role: "Финансовый аналитик · возврат средств",
     bio: "Анализирует транзакции, выявляет основания для возврата и просчитывает шансы по каждому делу. Работает с международными платёжными системами и арбитражными процедурами.",
-    avatar: avatarYuriy.url,
+    avatar: avatarYuriy,
     max: "https://max.ru/u/f9LHodD0cOLFl01v9AIPPRfD4wMJOjlXb8HnBN2J8R93tlN58_xtK7s_wfQ",
     tg: "https://t.me/yuriy_romanov_fin",
     tgHandle: "@yuriy_romanov_fin",
@@ -27,7 +27,7 @@ const managers = [
     name: "Полина Тарасова",
     role: "Специалист по работе с банками",
     bio: "Ведёт переговоры с банками-эмитентами, готовит претензии и сопровождает клиента на всех этапах диспута. Помогает быстро собрать пакет документов для подачи заявления.",
-    avatar: avatarMaria.url,
+    avatar: avatarMaria,
     max: "https://max.ru/u/f9LHodD0cOKTuyJ3w74xKB69rCiPNZgZG-hyzh4vhmhT1E2ByR507gqcIzA",
     tg: "https://t.me/pol008t",
     tgHandle: "@pol008t",
