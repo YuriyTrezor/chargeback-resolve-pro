@@ -25,8 +25,8 @@ const managers = [
     role: "Финансовый аналитик",
     avatar: avatarYuriy,
     max: "https://max.ru/u/f9LHodD0cOJY6aySRe5uGOc3HF8d23rycUvohXORf3xMuwDBpBJwzbOslHw",
-    tg: "https://t.me/yuriy_romanov_fin",
-    tgHandle: "@yuriy_romanov_fin",
+    tg: "https://t.me/yuriy_finance",
+    tgHandle: "@yuriy_finance",
   },
   {
     name: "Полина Тарасова",
