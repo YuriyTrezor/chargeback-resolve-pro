@@ -24,7 +24,7 @@ const managers = [
     name: "Юрий Романов",
     role: "Финансовый аналитик",
     avatar: avatarYuriy,
-    max: "https://max.ru/u/f9LHodD0cOLFl01v9AIPPRfD4wMJOjlXb8HnBN2J8R93tlN58_xtK7s_wfQ",
+    max: "https://max.ru/u/f9LHodD0cOJY6aySRe5uGOc3HF8d23rycUvohXORf3xMuwDBpBJwzbOslHw",
     tg: "https://t.me/yuriy_romanov_fin",
     tgHandle: "@yuriy_romanov_fin",
   },
