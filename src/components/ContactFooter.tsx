@@ -13,7 +13,7 @@ const ContactFooter = () => {
     const body = encodeURIComponent(
       `Имя: ${formData.name}\nEmail: ${formData.email}\nТелефон: ${formData.phone}\n\nСообщение:\n${formData.message}`
     );
-    window.location.href = `mailto:chargeback2022ru@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:legal@chardgeback.com?subject=${subject}&body=${body}`;
     toast({ title: "Заявка отправляется", description: "Откроется ваш почтовый клиент для отправки." });
   };
 
@@ -109,10 +109,10 @@ const ContactFooter = () => {
                 <div>
                   <div className="font-body font-semibold mb-1 text-foreground">Email</div>
                   <a
-                    href="mailto:chargeback2022ru@gmail.com"
+                    href="mailto:legal@chardgeback.com"
                     className="text-muted-foreground font-body text-sm hover:text-navy transition-colors underline"
                   >
-                    chargeback2022ru@gmail.com
+                    legal@chardgeback.com
                   </a>
                 </div>
               </div>
@@ -163,8 +163,8 @@ const ContactFooter = () => {
               <div className="font-body font-semibold mb-4 text-primary-foreground">Контакты</div>
               <ul className="text-primary-foreground/60 font-body text-sm space-y-2">
                 <li>
-                  <a href="mailto:chargeback2022ru@gmail.com" className="hover:text-primary-foreground transition-colors break-all">
-                    chargeback2022ru@gmail.com
+                  <a href="mailto:legal@chardgeback.com" className="hover:text-primary-foreground transition-colors break-all">
+                    legal@chardgeback.com
                   </a>
                 </li>
                 <li>Пн — Пт: 10:00 — 20:00 (МСК)</li>
