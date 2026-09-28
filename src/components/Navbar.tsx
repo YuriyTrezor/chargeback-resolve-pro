@@ -84,11 +84,12 @@ const ConsultationPopover = ({ onSelect }: { onSelect?: () => void }) => (
 );
 
 const links = [
-  { href: "#about", label: "О нас" },
-  { href: "#services", label: "Услуги" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#reviews", label: "Отзывы" },
-  { href: "#contact", label: "Контакты" },
+  { href: "/#about", label: "О нас" },
+  { href: "/#services", label: "Услуги" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/#reviews", label: "Отзывы" },
+  { href: "/#contact", label: "Контакты" },
+  { href: "/status", label: "Статус дела" },
 ];
 
 const Navbar = () => {
