@@ -17,7 +17,6 @@ const input = "w-full px-3 py-2 rounded-md border border-input bg-background fon
 const btn = "px-4 py-2 rounded-md bg-navy text-primary-foreground font-body text-sm font-semibold hover:opacity-90 disabled:opacity-60";
 
 const Login = () => {
-  const [mode, setMode] = useState<"in" | "up">("in");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [msg, setMsg] = useState("");
@@ -25,17 +24,8 @@ const Login = () => {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setMsg("");
-    if (mode === "in") {
-      const { error } = await supabase.auth.signInWithPassword({ email, password });
-      if (error) setMsg("Неверная почта или пароль");
-    } else {
-      const { error } = await supabase.auth.signUp({
-        email,
-        password,
-        options: { emailRedirectTo: `${window.location.origin}/staff` },
-      });
-      setMsg(error ? error.message : "Проверьте почту и подтвердите регистрацию.");
-    }
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+    if (error) setMsg("Неверная почта или пароль");
   };
 
   return (
@@ -44,10 +34,8 @@ const Login = () => {
       <input className={input} type="email" placeholder="Почта" value={email} onChange={(e) => setEmail(e.target.value)} required />
       <input className={input} type="password" placeholder="Пароль" value={password} onChange={(e) => setPassword(e.target.value)} required minLength={6} />
       {msg && <p className="text-sm font-body text-muted-foreground">{msg}</p>}
-      <button className={`${btn} w-full`} type="submit">{mode === "in" ? "Войти" : "Зарегистрироваться"}</button>
-      <button type="button" className="w-full text-xs text-muted-foreground font-body underline" onClick={() => setMode(mode === "in" ? "up" : "in")}>
-        {mode === "in" ? "Нет аккаунта? Регистрация" : "Уже есть аккаунт? Войти"}
-      </button>
+      <button className={`${btn} w-full`} type="submit">Войти</button>
+      <p className="text-xs text-center text-muted-foreground font-body">Доступ выдаёт только руководитель</p>
     </form>
   );
 };
