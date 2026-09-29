@@ -108,12 +108,12 @@ const Staff = () => {
     e.preventDefault();
     setErr("");
     const payload = {
-      case_number: nc.case_number.trim().toUpperCase().slice(0, 50),
+      case_number: nc.case_number.replace(/\D/g, "").slice(0, 12),
       client_email: nc.client_email.trim().toLowerCase().slice(0, 255),
       client_name: nc.client_name.trim().slice(0, 100) || null,
     };
-    if (!payload.case_number || !/^\S+@\S+\.\S+$/.test(payload.client_email)) {
-      setErr("Укажите номер дела и корректную почту");
+    if (payload.case_number.length < 4 || !/^\S+@\S+\.\S+$/.test(payload.client_email)) {
+      setErr("Укажите номер дела (только цифры) и корректную почту");
       return;
     }
     const { error } = await supabase.from("cases").insert(payload);
@@ -149,7 +149,7 @@ const Staff = () => {
       <div className="container max-w-3xl pt-12 pb-20">
         {header}
         <form onSubmit={create} className="bg-secondary rounded-xl p-4 grid gap-3 md:grid-cols-4 mb-6">
-          <input className={input} placeholder="Номер дела" value={nc.case_number} onChange={(e) => setNc({ ...nc, case_number: e.target.value })} />
+          <input className={input} inputMode="numeric" placeholder="Номер дела (цифры)" value={nc.case_number} onChange={(e) => setNc({ ...nc, case_number: e.target.value.replace(/\D/g, "").slice(0, 12) })} />
           <input className={input} placeholder="Почта клиента" value={nc.client_email} onChange={(e) => setNc({ ...nc, client_email: e.target.value })} />
           <input className={input} placeholder="Имя клиента" value={nc.client_name} onChange={(e) => setNc({ ...nc, client_name: e.target.value })} />
           <button className={btn} type="submit">Добавить дело</button>
