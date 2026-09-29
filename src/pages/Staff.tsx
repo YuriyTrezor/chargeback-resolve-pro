@@ -84,7 +84,8 @@ const Staff = () => {
   const [isAdmin, setIsAdmin] = useState<boolean | null>(null);
   const [cases, setCases] = useState<CaseRow[]>([]);
   const [search, setSearch] = useState("");
-  const [nc, setNc] = useState({ case_number: "", client_email: "", client_name: "" });
+  const genNumber = () => String(100000 + Math.floor(Math.random() * 900000));
+  const [nc, setNc] = useState({ case_number: genNumber(), client_email: "", client_name: "" });
   const [err, setErr] = useState("");
 
   useEffect(() => {
@@ -107,18 +108,18 @@ const Staff = () => {
   const create = async (e: React.FormEvent) => {
     e.preventDefault();
     setErr("");
-    const payload = {
-      case_number: nc.case_number.replace(/\D/g, "").slice(0, 12),
-      client_email: nc.client_email.trim().toLowerCase().slice(0, 255),
-      client_name: nc.client_name.trim().slice(0, 100) || null,
-    };
-    if (payload.case_number.length < 4 || !/^\S+@\S+\.\S+$/.test(payload.client_email)) {
-      setErr("Укажите номер дела (только цифры) и корректную почту");
+    const client_email = nc.client_email.trim().toLowerCase().slice(0, 255);
+    const client_name = nc.client_name.trim().slice(0, 100) || null;
+    if (!/^\S+@\S+\.\S+$/.test(client_email)) {
+      setErr("Укажите корректную почту клиента");
       return;
     }
-    const { error } = await supabase.from("cases").insert(payload);
-    if (error) { setErr(error.code === "23505" ? "Такой номер дела уже есть" : "Не удалось создать дело"); return; }
-    setNc({ case_number: "", client_email: "", client_name: "" });
+    const taken = new Set(cases.map((c) => c.case_number));
+    let case_number = nc.case_number;
+    while (taken.has(case_number)) case_number = genNumber();
+    const { error } = await supabase.from("cases").insert({ case_number, client_email, client_name });
+    if (error) { setErr("Не удалось создать дело"); return; }
+    setNc({ case_number: genNumber(), client_email: "", client_name: "" });
     load();
   };
 
@@ -149,10 +150,13 @@ const Staff = () => {
       <div className="container max-w-3xl pt-12 pb-20">
         {header}
         <form onSubmit={create} className="bg-secondary rounded-xl p-4 grid gap-3 md:grid-cols-4 mb-6">
-          <input className={input} inputMode="numeric" placeholder="Номер дела (цифры)" value={nc.case_number} onChange={(e) => setNc({ ...nc, case_number: e.target.value.replace(/\D/g, "").slice(0, 12) })} />
           <input className={input} placeholder="Почта клиента" value={nc.client_email} onChange={(e) => setNc({ ...nc, client_email: e.target.value })} />
-          <input className={input} placeholder="Имя клиента" value={nc.client_name} onChange={(e) => setNc({ ...nc, client_name: e.target.value })} />
+          <input className={input} placeholder="ФИО клиента" value={nc.client_name} onChange={(e) => setNc({ ...nc, client_name: e.target.value })} />
           <button className={btn} type="submit">Добавить дело</button>
+          <div className="flex flex-col justify-center items-end px-3 rounded-md border border-input bg-background">
+            <span className="text-[11px] text-muted-foreground font-body leading-none">Номер дела</span>
+            <span className="font-display font-bold text-navy text-lg leading-tight">{nc.case_number}</span>
+          </div>
           {err && <p className="md:col-span-4 text-sm text-destructive font-body">{err}</p>}
         </form>
         <input className={`${input} mb-4`} placeholder="Поиск по номеру, почте или имени" value={search} onChange={(e) => setSearch(e.target.value)} />
