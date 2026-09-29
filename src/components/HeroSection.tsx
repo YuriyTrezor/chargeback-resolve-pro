@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { TrendingUp, Percent, Send, Sparkles } from "lucide-react";
+import { TrendingUp, Percent, Send, Sparkles, Search, ArrowRight } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import avatarYuriy from "@/assets/avatars/yuriy.png";
 import avatarAnna from "@/assets/avatars/anna.png";
@@ -76,7 +76,7 @@ const HeroSection = () => {
             товар не получен или условия сделки были нарушены.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
             <Popover>
               <PopoverTrigger asChild>
                 <button
@@ -158,6 +158,28 @@ const HeroSection = () => {
               Подробнее
             </a>
           </div>
+
+          <a
+            href="/status"
+            className="group block max-w-xl mx-auto mb-16 p-5 md:p-6 rounded-2xl bg-primary-foreground text-primary shadow-2xl ring-4 ring-cta/40 hover:ring-cta/70 hover:-translate-y-1 transition-all"
+          >
+            <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+              <div className="flex items-center justify-center w-14 h-14 rounded-full bg-cta text-cta-foreground shrink-0 animate-pulse">
+                <Search className="w-7 h-7" />
+              </div>
+              <div className="flex-1">
+                <div className="font-display text-xl md:text-2xl font-bold text-primary">
+                  Уже наш клиент? Проверьте статус дела
+                </div>
+                <div className="text-sm text-muted-foreground font-body mt-1">
+                  Введите почту и номер дела — узнайте, на каком этапе ваш возврат
+                </div>
+              </div>
+              <span className="inline-flex items-center gap-1 px-5 py-3 rounded-md bg-cta text-cta-foreground font-body font-semibold group-hover:opacity-90 whitespace-nowrap">
+                Проверить <ArrowRight className="w-4 h-4" />
+              </span>
+            </div>
+          </a>
         </motion.div>
 
         <motion.div
