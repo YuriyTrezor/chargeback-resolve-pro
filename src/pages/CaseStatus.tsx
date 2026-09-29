@@ -77,9 +77,10 @@ const CaseStatus = () => {
             />
             <input
               type="text"
-              placeholder="Номер дела, например CB-1024"
+              inputMode="numeric"
+              placeholder="Номер дела (только цифры), например 482915"
               value={caseNumber}
-              onChange={(e) => setCaseNumber(e.target.value)}
+              onChange={(e) => setCaseNumber(e.target.value.replace(/\D/g, "").slice(0, 12))}
               className="w-full px-4 py-3 rounded-md border border-input bg-background font-body text-sm"
             />
             {error && <p className="text-sm text-destructive font-body">{error}</p>}
