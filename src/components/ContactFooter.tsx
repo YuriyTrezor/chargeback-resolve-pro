@@ -169,8 +169,8 @@ const ContactFooter = () => {
                 </li>
                 <li>Пн — Пт: 10:00 — 20:00 (МСК)</li>
                 <li>
-                  <a href="https://t.me/yuriy_finance" target="_blank" rel="noopener noreferrer" className="hover:text-primary-foreground transition-colors">
-                    Telegram: @yuriy_finance
+                  <a href="#managers" className="hover:text-primary-foreground transition-colors">
+                    Написать менеджеру ↓
                   </a>
                 </li>
                 <li className="text-primary-foreground/40 text-xs pt-1">
