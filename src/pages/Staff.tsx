@@ -135,7 +135,10 @@ const Staff = () => {
   const header = (
     <div className="flex justify-between items-center mb-6">
       <h1 className="font-display text-2xl font-bold text-navy">Дела клиентов</h1>
-      <button className="text-sm font-body text-muted-foreground underline" onClick={() => supabase.auth.signOut()}>Выйти</button>
+      <div className="flex items-center gap-5">
+        <a href="/" className="text-sm font-body text-navy underline">← На главный сайт</a>
+        <button className="text-sm font-body text-muted-foreground underline" onClick={() => supabase.auth.signOut()}>Выйти</button>
+      </div>
     </div>
   );
 
