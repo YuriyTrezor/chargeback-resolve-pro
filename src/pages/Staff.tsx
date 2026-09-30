@@ -10,6 +10,7 @@ type CaseRow = {
   client_name: string | null;
   stage: string;
   manager_comment: string | null;
+  agreed_amount: number | null;
   updated_at: string;
 };
 
@@ -43,11 +44,12 @@ const Login = () => {
 const CaseEditor = ({ row, onSaved }: { row: CaseRow; onSaved: () => void }) => {
   const [stage, setStage] = useState(row.stage);
   const [comment, setComment] = useState(row.manager_comment ?? "");
+  const [amount, setAmount] = useState(row.agreed_amount != null ? String(row.agreed_amount) : "");
   const [saving, setSaving] = useState(false);
 
   const save = async () => {
     setSaving(true);
-    await supabase.from("cases").update({ stage, manager_comment: comment.slice(0, 2000) }).eq("id", row.id);
+    await supabase.from("cases").update({ stage, manager_comment: comment.slice(0, 2000), agreed_amount: amount ? Number(amount) : null }).eq("id", row.id);
     setSaving(false);
     onSaved();
   };
@@ -61,14 +63,18 @@ const CaseEditor = ({ row, onSaved }: { row: CaseRow; onSaved: () => void }) => 
     <div className="bg-card border border-border rounded-xl p-4 space-y-3">
       <div className="flex flex-wrap justify-between gap-2">
         <div>
-          <div className="font-display font-bold text-navy">{row.case_number}</div>
-          <div className="text-xs text-muted-foreground font-body">{row.client_name} · {row.client_email}</div>
+          <div className="font-body font-semibold text-foreground">{row.client_name}</div>
+          <div className="text-xs text-muted-foreground font-body">{row.client_email} · {new Date(row.updated_at).toLocaleString("ru-RU")}</div>
         </div>
-        <div className="text-xs text-muted-foreground font-body">{new Date(row.updated_at).toLocaleString("ru-RU")}</div>
+        <div className="text-right">
+          <div className="text-[11px] text-muted-foreground font-body">Номер дела</div>
+          <div className="font-display font-bold text-navy text-lg">{row.case_number}</div>
+        </div>
       </div>
       <select className={input} value={stage} onChange={(e) => setStage(e.target.value)}>
         {CASE_STAGES.map((s) => <option key={s.value} value={s.value}>{s.label}</option>)}
       </select>
+      <input className={input} inputMode="decimal" placeholder="Согласованная сумма, ₽" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^\d.,]/g, "").replace(",", "."))} />
       <textarea className={input} rows={3} placeholder="Комментарий для клиента" value={comment} onChange={(e) => setComment(e.target.value)} />
       <div className="flex gap-2">
         <button className={btn} onClick={save} disabled={saving}>{saving ? "Сохраняем..." : "Сохранить"}</button>
@@ -85,7 +91,7 @@ const Staff = () => {
   const [cases, setCases] = useState<CaseRow[]>([]);
   const [search, setSearch] = useState("");
   const genNumber = () => String(100000 + Math.floor(Math.random() * 900000));
-  const [nc, setNc] = useState({ case_number: genNumber(), client_email: "", client_name: "" });
+  const [nc, setNc] = useState({ client_email: "", client_name: "", amount: "" });
   const [err, setErr] = useState("");
 
   useEffect(() => {
@@ -115,11 +121,11 @@ const Staff = () => {
       return;
     }
     const taken = new Set(cases.map((c) => c.case_number));
-    let case_number = nc.case_number;
+    let case_number = genNumber();
     while (taken.has(case_number)) case_number = genNumber();
-    const { error } = await supabase.from("cases").insert({ case_number, client_email, client_name });
+    const { error } = await supabase.from("cases").insert({ case_number, client_email, client_name, agreed_amount: nc.amount ? Number(nc.amount) : null });
     if (error) { setErr("Не удалось создать дело"); return; }
-    setNc({ case_number: genNumber(), client_email: "", client_name: "" });
+    setNc({ client_email: "", client_name: "", amount: "" });
     load();
   };
 
@@ -152,11 +158,8 @@ const Staff = () => {
         <form onSubmit={create} className="bg-secondary rounded-xl p-4 grid gap-3 md:grid-cols-4 mb-6">
           <input className={input} placeholder="Почта клиента" value={nc.client_email} onChange={(e) => setNc({ ...nc, client_email: e.target.value })} />
           <input className={input} placeholder="ФИО клиента" value={nc.client_name} onChange={(e) => setNc({ ...nc, client_name: e.target.value })} />
+          <input className={input} inputMode="decimal" placeholder="Согласованная сумма, ₽" value={nc.amount} onChange={(e) => setNc({ ...nc, amount: e.target.value.replace(/[^\d.,]/g, "").replace(",", ".") })} />
           <button className={btn} type="submit">Добавить дело</button>
-          <div className="flex flex-col justify-center items-end px-3 rounded-md border border-input bg-background">
-            <span className="text-[11px] text-muted-foreground font-body leading-none">Номер дела</span>
-            <span className="font-display font-bold text-navy text-lg leading-tight">{nc.case_number}</span>
-          </div>
           {err && <p className="md:col-span-4 text-sm text-destructive font-body">{err}</p>}
         </form>
         <input className={`${input} mb-4`} placeholder="Поиск по номеру, почте или имени" value={search} onChange={(e) => setSearch(e.target.value)} />
