@@ -16,6 +16,7 @@ export type Database = {
     Tables: {
       cases: {
         Row: {
+          agreed_amount: number | null
           case_number: string
           client_email: string
           client_name: string | null
@@ -26,6 +27,7 @@ export type Database = {
           updated_at: string
         }
         Insert: {
+          agreed_amount?: number | null
           case_number: string
           client_email: string
           client_name?: string | null
@@ -36,6 +38,7 @@ export type Database = {
           updated_at?: string
         }
         Update: {
+          agreed_amount?: number | null
           case_number?: string
           client_email?: string
           client_name?: string | null
