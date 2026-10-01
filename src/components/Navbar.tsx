@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Send } from "lucide-react";
+import { Menu, X, Send, SearchCheck, ChevronRight } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import avatarYuriy from "@/assets/avatars/yuriy.png";
 import avatarAnna from "@/assets/avatars/anna.png";
@@ -39,7 +39,7 @@ const ConsultationPopover = ({ onSelect }: { onSelect?: () => void }) => (
         Консультация
       </button>
     </PopoverTrigger>
-    <PopoverContent align="end" className="w-80 p-0 overflow-hidden">
+    <PopoverContent align="end" collisionPadding={12} className="w-[min(20rem,calc(100vw-1.5rem))] max-h-[70dvh] overflow-y-auto p-0">
       <div className="px-4 py-3 border-b border-border bg-secondary">
         <div className="font-display font-bold text-foreground text-sm">Выберите специалиста</div>
         <div className="text-xs text-muted-foreground font-body mt-0.5">Ответим в течение нескольких минут</div>
@@ -124,14 +124,28 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="md:hidden bg-background border-b border-border pb-4">
-          <div className="container flex flex-col gap-4">
-            {links.map((l) => (
+        <div className="md:hidden bg-background border-b border-border pb-4 max-h-[calc(100dvh-4rem)] overflow-y-auto">
+          <div className="container flex flex-col gap-3 pt-3">
+            <a
+              href="/status"
+              onClick={() => setOpen(false)}
+              className="flex items-center gap-3 p-3 rounded-lg border border-navy/20 bg-secondary shadow-soft"
+            >
+              <span className="flex items-center justify-center w-10 h-10 rounded-full bg-navy text-primary-foreground shrink-0">
+                <SearchCheck className="w-5 h-5" />
+              </span>
+              <span className="flex-1 min-w-0">
+                <span className="block font-display font-bold text-navy text-sm">Проверить статус дела</span>
+                <span className="block text-xs text-muted-foreground font-body">Почта или номер дела</span>
+              </span>
+              <ChevronRight className="w-5 h-5 text-navy shrink-0" />
+            </a>
+            {links.filter((l) => l.href !== "/status").map((l) => (
               <a
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="font-body text-sm text-muted-foreground hover:text-navy transition-colors"
+                className="font-body text-sm text-muted-foreground hover:text-navy transition-colors py-1"
               >
                 {l.label}
               </a>
