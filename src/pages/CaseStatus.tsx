@@ -58,24 +58,16 @@ const CaseStatus = () => {
               Проверить статус дела
             </h1>
             <p className="font-body text-muted-foreground">
-              Введите почту, указанную при обращении, и номер дела, который вам выдал менеджер.
+              Введите адрес электронной почты или номер дела.
             </p>
           </div>
 
           <form onSubmit={submit} className="bg-card border border-border rounded-xl p-6 shadow-soft space-y-4">
             <input
-              type="email"
-              placeholder="Ваша почта"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full px-4 py-3 rounded-md border border-input bg-background font-body text-sm"
-            />
-            <input
               type="text"
-              inputMode="numeric"
-              placeholder="Номер дела (только цифры), например 482915"
-              value={caseNumber}
-              onChange={(e) => setCaseNumber(e.target.value.replace(/\D/g, "").slice(0, 12))}
+              placeholder="Почта или номер дела, например 482915"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
               className="w-full px-4 py-3 rounded-md border border-input bg-background font-body text-sm"
             />
             {error && <p className="text-sm text-destructive font-body">{error}</p>}
