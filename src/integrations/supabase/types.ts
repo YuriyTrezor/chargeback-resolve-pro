@@ -76,6 +76,7 @@ export type Database = {
       get_case_status: {
         Args: { _case_number: string; _email: string }
         Returns: {
+          agreed_amount: number
           case_number: string
           client_name: string
           manager_comment: string
