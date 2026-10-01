@@ -6,10 +6,7 @@ import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import { CASE_STAGES, stageIndex } from "@/lib/caseStages";
 
-const schema = z.object({
-  email: z.string().trim().email("Введите корректную почту").max(255),
-  caseNumber: z.string().trim().min(1, "Введите номер дела").max(50),
-});
+const schema = z.string().trim().min(1, "Введите почту или номер дела").max(255);
 
 type Result = {
   case_number: string;
@@ -20,8 +17,7 @@ type Result = {
 };
 
 const CaseStatus = () => {
-  const [email, setEmail] = useState("");
-  const [caseNumber, setCaseNumber] = useState("");
+  const [query, setQuery] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<Result | null>(null);
@@ -32,15 +28,14 @@ const CaseStatus = () => {
     setError("");
     setNotFound(false);
     setResult(null);
-    const parsed = schema.safeParse({ email, caseNumber });
+    const parsed = schema.safeParse(query);
     if (!parsed.success) {
       setError(parsed.error.issues[0].message);
       return;
     }
     setLoading(true);
-    const { data, error } = await supabase.rpc("get_case_status", {
-      _email: parsed.data.email,
-      _case_number: parsed.data.caseNumber,
+    const { data, error } = await supabase.rpc("find_case_status", {
+      _query: parsed.data,
     });
     setLoading(false);
     if (error) {
