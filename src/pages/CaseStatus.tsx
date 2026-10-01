@@ -17,6 +17,7 @@ type Result = {
   stage: string;
   manager_comment: string | null;
   updated_at: string;
+  agreed_amount: number | null;
 };
 
 const CaseStatus = () => {
@@ -117,6 +118,16 @@ const CaseStatus = () => {
                   </div>
                 </div>
               </div>
+
+              {result.agreed_amount != null && (
+                <div className="mb-6 p-5 rounded-lg border border-navy/20 bg-secondary text-center">
+                  <div className="text-xs text-muted-foreground font-body mb-1">Сумма к возврату</div>
+                  <div className="font-display text-3xl md:text-4xl font-bold text-navy">
+                    {Number(result.agreed_amount).toLocaleString("ru-RU")} ₽
+                  </div>
+                </div>
+              )}
+
 
               <ol className="space-y-3">
                 {CASE_STAGES.map((s, i) => {
