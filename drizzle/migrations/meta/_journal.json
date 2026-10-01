@@ -15,6 +15,13 @@
       "when": 1790739061236,
       "tag": "0001_cases_amount",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1790828646143,
+      "tag": "0002_case_status_lookup_any",
+      "breakpoints": true
     }
   ]
 }
