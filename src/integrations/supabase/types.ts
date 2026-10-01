@@ -73,16 +73,6 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      find_case_status: {
-        Args: { _query: string }
-        Returns: {
-          case_number: string
-          client_name: string
-          manager_comment: string
-          stage: string
-          updated_at: string
-        }[]
-      }
       get_case_status: {
         Args: { _case_number: string; _email: string }
         Returns: {
