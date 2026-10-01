@@ -6,7 +6,10 @@ import Navbar from "@/components/Navbar";
 import ContactFooter from "@/components/ContactFooter";
 import { CASE_STAGES, stageIndex } from "@/lib/caseStages";
 
-const schema = z.string().trim().min(1, "Введите почту или номер дела").max(255);
+const schema = z.object({
+  email: z.string().trim().toLowerCase().email("Введите корректную почту").max(255),
+  caseNumber: z.string().regex(/^\d{4,12}$/, "Номер дела — только цифры"),
+});
 
 type Result = {
   case_number: string;
@@ -17,7 +20,8 @@ type Result = {
 };
 
 const CaseStatus = () => {
-  const [query, setQuery] = useState("");
+  const [email, setEmail] = useState("");
+  const [caseNumber, setCaseNumber] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<Result | null>(null);
@@ -28,14 +32,15 @@ const CaseStatus = () => {
     setError("");
     setNotFound(false);
     setResult(null);
-    const parsed = schema.safeParse(query);
+    const parsed = schema.safeParse({ email, caseNumber });
     if (!parsed.success) {
       setError(parsed.error.issues[0].message);
       return;
     }
     setLoading(true);
-    const { data, error } = await supabase.rpc("find_case_status", {
-      _query: parsed.data,
+    const { data, error } = await supabase.rpc("get_case_status", {
+      _email: parsed.data.email,
+      _case_number: parsed.data.caseNumber,
     });
     setLoading(false);
     if (error) {
@@ -58,16 +63,24 @@ const CaseStatus = () => {
               Проверить статус дела
             </h1>
             <p className="font-body text-muted-foreground">
-              Введите адрес электронной почты или номер дела.
+              Введите адрес электронной почты и номер дела.
             </p>
           </div>
 
           <form onSubmit={submit} className="bg-card border border-border rounded-xl p-6 shadow-soft space-y-4">
             <input
+              type="email"
+              placeholder="Электронная почта"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-3 rounded-md border border-input bg-background font-body text-sm"
+            />
+            <input
               type="text"
-              placeholder="Почта или номер дела, например 482915"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
+              inputMode="numeric"
+              placeholder="Номер дела, например 482915"
+              value={caseNumber}
+              onChange={(e) => setCaseNumber(e.target.value.replace(/\D/g, ""))}
               className="w-full px-4 py-3 rounded-md border border-input bg-background font-body text-sm"
             />
             {error && <p className="text-sm text-destructive font-body">{error}</p>}
