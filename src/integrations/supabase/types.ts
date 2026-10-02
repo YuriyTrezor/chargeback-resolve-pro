@@ -50,6 +50,68 @@ export type Database = {
         }
         Relationships: []
       }
+      guest_chat_messages: {
+        Row: {
+          chat_id: string
+          created_at: string
+          id: string
+          is_read: boolean
+          message: string
+          sender_role: string
+        }
+        Insert: {
+          chat_id: string
+          created_at?: string
+          id?: string
+          is_read?: boolean
+          message: string
+          sender_role: string
+        }
+        Update: {
+          chat_id?: string
+          created_at?: string
+          id?: string
+          is_read?: boolean
+          message?: string
+          sender_role?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "guest_chat_messages_chat_id_fkey"
+            columns: ["chat_id"]
+            isOneToOne: false
+            referencedRelation: "guest_chats"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      guest_chats: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          last_message_at: string
+          name: string
+          token: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          last_message_at?: string
+          name: string
+          token?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          last_message_at?: string
+          name?: string
+          token?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           id: string
@@ -83,6 +145,23 @@ export type Database = {
           stage: string
           updated_at: string
         }[]
+      }
+      guest_chat_init: {
+        Args: { _email: string; _name: string; _token: string }
+        Returns: string
+      }
+      guest_chat_list: {
+        Args: { _token: string }
+        Returns: {
+          created_at: string
+          id: string
+          message: string
+          sender_role: string
+        }[]
+      }
+      guest_chat_send: {
+        Args: { _message: string; _token: string }
+        Returns: undefined
       }
       has_role: {
         Args: {

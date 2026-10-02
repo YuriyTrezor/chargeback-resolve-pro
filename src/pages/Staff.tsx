@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { Session } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
 import { CASE_STAGES } from "@/lib/caseStages";
+import StaffChat from "@/components/StaffChat";
 
 type CaseRow = {
   id: string;
@@ -93,6 +94,8 @@ const Staff = () => {
   const genNumber = () => String(100000 + Math.floor(Math.random() * 900000));
   const [nc, setNc] = useState({ client_email: "", client_name: "", amount: "" });
   const [err, setErr] = useState("");
+  const [tab, setTab] = useState<"cases" | "chat">("cases");
+  const [chatUnread, setChatUnread] = useState(0);
 
   useEffect(() => {
     const { data: sub } = supabase.auth.onAuthStateChange((_e, s) => setSession(s));
@@ -154,10 +157,20 @@ const Staff = () => {
   const q = search.trim().toLowerCase();
   const filtered = q ? cases.filter((c) => c.case_number.toLowerCase().includes(q) || c.client_email.includes(q) || (c.client_name ?? "").toLowerCase().includes(q)) : cases;
 
+  const tabBtn = (t: "cases" | "chat", label: string) => (
+    <button onClick={() => setTab(t)} className={`px-4 py-2 rounded-md font-body text-sm font-semibold ${tab === t ? "bg-navy text-primary-foreground" : "bg-secondary text-navy"}`}>{label}</button>
+  );
+
   return (
     <div className="min-h-screen bg-background">
-      <div className="container max-w-3xl pt-12 pb-20">
+      <div className={`container ${tab === "chat" ? "max-w-5xl" : "max-w-3xl"} pt-12 pb-20`}>
         {header}
+        <div className="flex gap-2 mb-6">
+          {tabBtn("cases", "Дела")}
+          {tabBtn("chat", `Чат с клиентами${chatUnread ? ` (${chatUnread})` : ""}`)}
+        </div>
+        <div className={tab === "chat" ? "" : "hidden"}><StaffChat onUnread={setChatUnread} /></div>
+        {tab === "cases" && (<>
         <form onSubmit={create} className="bg-secondary rounded-xl p-4 grid gap-3 md:grid-cols-4 mb-6">
           <input className={input} placeholder="Почта клиента" value={nc.client_email} onChange={(e) => setNc({ ...nc, client_email: e.target.value })} />
           <input className={input} placeholder="ФИО клиента" value={nc.client_name} onChange={(e) => setNc({ ...nc, client_name: e.target.value })} />
@@ -170,6 +183,7 @@ const Staff = () => {
           {filtered.map((c) => <CaseEditor key={c.id + c.updated_at} row={c} onSaved={load} />)}
           {filtered.length === 0 && <p className="text-sm text-muted-foreground font-body">Дел пока нет.</p>}
         </div>
+        </>)}
       </div>
     </div>
   );
