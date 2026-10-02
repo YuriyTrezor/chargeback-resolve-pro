@@ -29,6 +29,13 @@
       "when": 1790830565804,
       "tag": "0003_case_status_amount",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1790925216671,
+      "tag": "0004_guest_chat",
+      "breakpoints": true
     }
   ]
 }
