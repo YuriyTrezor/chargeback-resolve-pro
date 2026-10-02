@@ -1,8 +1,6 @@
 export const CASE_STAGES = [
-  { value: "received", label: "Заявка принята" },
-  { value: "documents", label: "Сбор и проверка документов" },
-  { value: "submitted", label: "Запрос направлен в банк" },
-  { value: "review", label: "Рассмотрение банком" },
+  { value: "documents", label: "Документы собираются" },
+  { value: "submitted", label: "Запрос в банке" },
   { value: "decision", label: "Решение принято" },
   { value: "completed", label: "Средства возвращены" },
 ] as const;
