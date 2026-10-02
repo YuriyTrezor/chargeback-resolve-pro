@@ -123,7 +123,7 @@ const StaffChat = ({ onUnread }: { onUnread?: (n: number) => void }) => {
                 ref={taRef}
                 value={text}
                 rows={1}
-                placeholder="Ответ клиенту... (Shift+Enter — новая строка)"
+                placeholder="Ответ клиенту..."
                 onChange={(e) => { setText(e.target.value); e.target.style.height = "auto"; e.target.style.height = Math.min(e.target.scrollHeight, 160) + "px"; }}
                 onKeyDown={(e) => { if (e.key === "Enter" && !e.shiftKey && window.innerWidth >= 768) { e.preventDefault(); send(); } }}
                 className="flex-1 resize-none bg-background border border-border rounded-xl px-3 py-2 text-sm font-body focus:outline-none"
