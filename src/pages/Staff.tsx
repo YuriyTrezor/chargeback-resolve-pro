@@ -75,7 +75,8 @@ const CaseEditor = ({ row, onSaved }: { row: CaseRow; onSaved: () => void }) => 
       <select className={input} value={stage} onChange={(e) => setStage(e.target.value)}>
         {CASE_STAGES.map((s) => <option key={s.value} value={s.value}>{s.label}</option>)}
       </select>
-      <input className={input} inputMode="decimal" placeholder="Согласованная сумма, ₽" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^\d.,]/g, "").replace(",", "."))} />
+      <label className="block text-xs text-muted-foreground font-body -mb-2">Согласованная сумма, $</label>
+      <input className={input} inputMode="decimal" placeholder="Согласованная сумма, $" value={amount} onChange={(e) => setAmount(e.target.value.replace(/[^\d.,]/g, "").replace(",", "."))} />
       <textarea className={input} rows={3} placeholder="Комментарий для клиента" value={comment} onChange={(e) => setComment(e.target.value)} />
       <div className="flex gap-2">
         <button className={btn} onClick={save} disabled={saving}>{saving ? "Сохраняем..." : "Сохранить"}</button>
@@ -174,7 +175,7 @@ const Staff = () => {
         <form onSubmit={create} className="bg-secondary rounded-xl p-4 grid gap-3 md:grid-cols-4 mb-6">
           <input className={input} placeholder="Почта клиента" value={nc.client_email} onChange={(e) => setNc({ ...nc, client_email: e.target.value })} />
           <input className={input} placeholder="ФИО клиента" value={nc.client_name} onChange={(e) => setNc({ ...nc, client_name: e.target.value })} />
-          <input className={input} inputMode="decimal" placeholder="Согласованная сумма, ₽" value={nc.amount} onChange={(e) => setNc({ ...nc, amount: e.target.value.replace(/[^\d.,]/g, "").replace(",", ".") })} />
+          <input className={input} inputMode="decimal" placeholder="Согласованная сумма, $" value={nc.amount} onChange={(e) => setNc({ ...nc, amount: e.target.value.replace(/[^\d.,]/g, "").replace(",", ".") })} />
           <button className={btn} type="submit">Добавить дело</button>
           {err && <p className="md:col-span-4 text-sm text-destructive font-body">{err}</p>}
         </form>

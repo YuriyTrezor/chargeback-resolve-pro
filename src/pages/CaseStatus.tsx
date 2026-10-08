@@ -123,7 +123,7 @@ const CaseStatus = () => {
                 <div className="mb-6 p-5 rounded-lg border border-navy/20 bg-secondary text-center">
                   <div className="text-xs text-muted-foreground font-body mb-1">Сумма к возврату</div>
                   <div className="font-display text-3xl md:text-4xl font-bold text-navy">
-                    {Number(result.agreed_amount).toLocaleString("ru-RU")} ₽
+                    ${Number(result.agreed_amount).toLocaleString("ru-RU")}
                   </div>
                 </div>
               )}
