@@ -14,7 +14,7 @@ const managers = [
     tg: "https://t.me/Annak005",
   },
   {
-    name: "Юрий Романов",
+    name: "Юрий Журавлев",
     role: "Финансовый аналитик",
     avatar: avatarYuriy,
     max: "https://max.ru/u/f9LHodD0cOJY6aySRe5uGOc3HF8d23rycUvohXORf3xMuwDBpBJwzbOslHw",
