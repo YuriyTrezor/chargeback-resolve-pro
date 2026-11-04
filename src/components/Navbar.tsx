@@ -101,7 +101,7 @@ const Navbar = () => {
       <div className="container flex items-center justify-between h-16">
         <a href="#" className="flex items-center gap-2.5 font-display text-xl font-bold text-navy">
           <img
-            src={logoAsset.url}
+            src={logo}
             alt="Chargeback"
             className="w-9 h-9 rounded-full object-cover ring-2 ring-navy/10"
           />
