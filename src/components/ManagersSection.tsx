@@ -19,7 +19,7 @@ const managers = [
     role: "Финансовый аналитик · возврат средств",
     bio: "Анализирует транзакции, выявляет основания для возврата и просчитывает шансы по каждому делу. Работает с международными платёжными системами и арбитражными процедурами.",
     avatar: avatarYuriy,
-    max: "https://max.ru/u/f9LHodD0cOJY6aySRe5uGOc3HF8d23rycUvohXORf3xMuwDBpBJwzbOslHw",
+    max: "https://max.ru/u/f9LHodD0cOLFPMZsfQvHwM-ndfwMLZa3aWepMMmYak1MfXlvZArt6w8mwG0",
     tg: "https://t.me/yuriy_finance",
     tgHandle: "@yuriy_finance",
   },
