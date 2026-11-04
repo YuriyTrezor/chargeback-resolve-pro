@@ -6,15 +6,6 @@ import avatarMaria from "@/assets/avatars/polina.jpg";
 
 const managers = [
   {
-    name: "Анна Крылова",
-    role: "Ведущий специалист по chargeback",
-    bio: "Сопровождает клиентов с момента обращения до возврата средств. Готовит claim в банк, формирует доказательную базу и контролирует сроки рассмотрения по правилам Visa и Mastercard.",
-    avatar: avatarAnna,
-    max: "https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw",
-    tg: "https://t.me/Annak005",
-    tgHandle: "@Annak005",
-  },
-  {
     name: "Юрий Журавлев",
     role: "Финансовый аналитик · возврат средств",
     bio: "Анализирует транзакции, выявляет основания для возврата и просчитывает шансы по каждому делу. Работает с международными платёжными системами и арбитражными процедурами.",
@@ -22,6 +13,15 @@ const managers = [
     max: "https://max.ru/u/f9LHodD0cOLFPMZsfQvHwM-ndfwMLZa3aWepMMmYak1MfXlvZArt6w8mwG0",
     tg: "https://t.me/yuriy_finance",
     tgHandle: "@yuriy_finance",
+  },
+  {
+    name: "Анна Крылова",
+    role: "Ведущий специалист по chargeback",
+    bio: "Сопровождает клиентов с момента обращения до возврата средств. Готовит claim в банк, формирует доказательную базу и контролирует сроки рассмотрения по правилам Visa и Mastercard.",
+    avatar: avatarAnna,
+    max: "https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw",
+    tg: "https://t.me/Annak005",
+    tgHandle: "@Annak005",
   },
   {
     name: "Полина Тарасова",
