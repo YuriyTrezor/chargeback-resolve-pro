@@ -4,6 +4,7 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import avatarYuriy from "@/assets/avatars/yuriy.png";
 import avatarAnna from "@/assets/avatars/anna.png";
 import avatarMaria from "@/assets/avatars/polina.jpg";
+import logo from "@/assets/logo.png";
 
 const managers = [
   {
@@ -98,7 +99,12 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border shadow-soft">
       <div className="container flex items-center justify-between h-16">
-        <a href="#" className="font-display text-xl font-bold text-navy">
+        <a href="#" className="flex items-center gap-2.5 font-display text-xl font-bold text-navy">
+          <img
+            src={logo}
+            alt="Chargeback"
+            className="w-9 h-9 rounded-full object-cover ring-2 ring-navy/10"
+          />
           Chargeback
         </a>
 
