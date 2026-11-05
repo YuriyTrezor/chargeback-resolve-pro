@@ -3,7 +3,7 @@ import { Menu, X, Send, SearchCheck, ChevronRight } from "lucide-react";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import avatarYuriy from "@/assets/avatars/yuriy.png";
 import avatarAnna from "@/assets/avatars/anna.png";
-import avatarKsenia from "@/assets/avatars/ksenia.jpg";
+import avatarPolina from "@/assets/avatars/polina.jpg";
 
 const managers = [
   {
@@ -21,11 +21,11 @@ const managers = [
     tg: "https://t.me/Annak005",
   },
   {
-    name: "Ксения Королева",
-    role: "Специалист по возврату средств",
-    avatar: avatarKsenia,
-    max: "https://max.ru/u/f9LHodD0cOINs8o_-AZoth_Q33r5bmOIzKFwLa469bVNh_0RJMzQZvrX8Ls",
-    tg: "https://t.me/ksenia_consult",
+    name: "Полина Тарасова",
+    role: "Специалист по работе с банками",
+    avatar: avatarPolina,
+    max: "https://max.ru/u/f9LHodD0cOKTuyJ3w74xKB69rCiPNZgZG-hyzh4vhmhT1E2ByR507gqcIzA",
+    tg: "https://t.me/pol008t",
   },
 ];
 
