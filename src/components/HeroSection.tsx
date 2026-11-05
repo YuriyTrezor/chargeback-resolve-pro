@@ -3,7 +3,7 @@ import { TrendingUp, Percent, Send, Sparkles, Search, ArrowRight } from "lucide-
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import avatarYuriy from "@/assets/avatars/yuriy.png";
 import avatarAnna from "@/assets/avatars/anna.png";
-import avatarKsenia from "@/assets/avatars/ksenia.jpg";
+import avatarPolina from "@/assets/avatars/polina.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const stats = [
@@ -29,12 +29,12 @@ const managers = [
     tgHandle: "@Annak005",
   },
   {
-    name: "Ксения Королева",
-    role: "Специалист по возврату средств",
-    avatar: avatarKsenia,
-    max: "https://max.ru/u/f9LHodD0cOINs8o_-AZoth_Q33r5bmOIzKFwLa469bVNh_0RJMzQZvrX8Ls",
-    tg: "https://t.me/ksenia_consult",
-    tgHandle: "@ksenia_consult",
+    name: "Полина Тарасова",
+    role: "Специалист по работе с банками",
+    avatar: avatarPolina,
+    max: "https://max.ru/u/f9LHodD0cOKTuyJ3w74xKB69rCiPNZgZG-hyzh4vhmhT1E2ByR507gqcIzA",
+    tg: "https://t.me/pol008t",
+    tgHandle: "@pol008t",
   },
 ];
 
