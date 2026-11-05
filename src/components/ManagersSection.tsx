@@ -2,17 +2,26 @@ import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import avatarYuriy from "@/assets/avatars/yuriy.png";
 import avatarAnna from "@/assets/avatars/anna.png";
-import avatarMaria from "@/assets/avatars/polina.jpg";
+import avatarKsenia from "@/assets/avatars/ksenia.jpg";
 
 const managers = [
   {
     name: "Юрий Журавлев",
-    role: "Финансовый аналитик · возврат средств",
-    bio: "Анализирует транзакции, выявляет основания для возврата и просчитывает шансы по каждому делу. Работает с международными платёжными системами и арбитражными процедурами.",
+    role: "Руководитель направления · директор",
+    bio: "Руководит направлением возврата средств и лично курирует сложные дела. Анализирует транзакции, оценивает шансы и выстраивает стратегию работы с международными платёжными системами.",
     avatar: avatarYuriy,
     max: "https://max.ru/u/f9LHodD0cOLFPMZsfQvHwM-ndfwMLZa3aWepMMmYak1MfXlvZArt6w8mwG0",
     tg: "https://t.me/yuriy_finance",
     tgHandle: "@yuriy_finance",
+  },
+  {
+    name: "Ксения Королева",
+    role: "Специалист по возврату средств",
+    bio: "Сопровождает клиента на всех этапах диспута: готовит претензию в банк, собирает пакет документов и контролирует сроки рассмотрения по правилам Visa и Mastercard.",
+    avatar: avatarKsenia,
+    max: "https://max.ru/u/f9LHodD0cOINs8o_-AZoth_Q33r5bmOIzKFwLa469bVNh_0RJMzQZvrX8Ls",
+    tg: "https://t.me/ksenia_consult",
+    tgHandle: "@ksenia_consult",
   },
   {
     name: "Анна Крылова",
@@ -22,15 +31,6 @@ const managers = [
     max: "https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw",
     tg: "https://t.me/Annak005",
     tgHandle: "@Annak005",
-  },
-  {
-    name: "Полина Тарасова",
-    role: "Специалист по работе с банками",
-    bio: "Ведёт переговоры с банками-эмитентами, готовит претензии и сопровождает клиента на всех этапах диспута. Помогает быстро собрать пакет документов для подачи заявления.",
-    avatar: avatarMaria,
-    max: "https://max.ru/u/f9LHodD0cOKTuyJ3w74xKB69rCiPNZgZG-hyzh4vhmhT1E2ByR507gqcIzA",
-    tg: "https://t.me/pol008t",
-    tgHandle: "@pol008t",
   },
 ];
 
