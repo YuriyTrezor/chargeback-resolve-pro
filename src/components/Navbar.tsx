@@ -14,18 +14,18 @@ const managers = [
     tg: "https://t.me/yuriy_finance",
   },
   {
-    name: "Ксения Королева",
-    role: "Специалист по возврату средств",
-    avatar: avatarKsenia,
-    max: "https://max.ru/u/f9LHodD0cOINs8o_-AZoth_Q33r5bmOIzKFwLa469bVNh_0RJMzQZvrX8Ls",
-    tg: "https://t.me/ksenia_consult",
-  },
-  {
     name: "Анна Крылова",
     role: "Ведущий специалист по chargeback",
     avatar: avatarAnna,
     max: "https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw",
     tg: "https://t.me/Annak005",
+  },
+  {
+    name: "Ксения Королева",
+    role: "Специалист по возврату средств",
+    avatar: avatarKsenia,
+    max: "https://max.ru/u/f9LHodD0cOINs8o_-AZoth_Q33r5bmOIzKFwLa469bVNh_0RJMzQZvrX8Ls",
+    tg: "https://t.me/ksenia_consult",
   },
 ];
 

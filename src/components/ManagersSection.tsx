@@ -15,15 +15,6 @@ const managers = [
     tgHandle: "@yuriy_finance",
   },
   {
-    name: "Ксения Королева",
-    role: "Специалист по возврату средств",
-    bio: "Сопровождает клиента на всех этапах диспута: готовит претензию в банк, собирает пакет документов и контролирует сроки рассмотрения по правилам Visa и Mastercard.",
-    avatar: avatarKsenia,
-    max: "https://max.ru/u/f9LHodD0cOINs8o_-AZoth_Q33r5bmOIzKFwLa469bVNh_0RJMzQZvrX8Ls",
-    tg: "https://t.me/ksenia_consult",
-    tgHandle: "@ksenia_consult",
-  },
-  {
     name: "Анна Крылова",
     role: "Ведущий специалист по chargeback",
     bio: "Сопровождает клиентов с момента обращения до возврата средств. Готовит claim в банк, формирует доказательную базу и контролирует сроки рассмотрения по правилам Visa и Mastercard.",
@@ -31,6 +22,15 @@ const managers = [
     max: "https://max.ru/u/f9LHodD0cOJt7NBEKU_MZoq8swMCoRvGT2ngCRv7Mvg_cV3LjHTY_wGF0Sw",
     tg: "https://t.me/Annak005",
     tgHandle: "@Annak005",
+  },
+  {
+    name: "Ксения Королева",
+    role: "Специалист по возврату средств",
+    bio: "Сопровождает клиента на всех этапах диспута: готовит претензию в банк, собирает пакет документов и контролирует сроки рассмотрения по правилам Visa и Mastercard.",
+    avatar: avatarKsenia,
+    max: "https://max.ru/u/f9LHodD0cOINs8o_-AZoth_Q33r5bmOIzKFwLa469bVNh_0RJMzQZvrX8Ls",
+    tg: "https://t.me/ksenia_consult",
+    tgHandle: "@ksenia_consult",
   },
 ];
 
