@@ -8,7 +8,7 @@ import avatarPolina from "@/assets/avatars/polina.jpg";
 const managers = [
   {
     name: "Юрий Журавлев",
-    role: "Руководитель направления",
+    role: "Финансовый аналитик",
     avatar: avatarYuriy,
     max: "https://max.ru/u/f9LHodD0cOLFPMZsfQvHwM-ndfwMLZa3aWepMMmYak1MfXlvZArt6w8mwG0",
     tg: "https://t.me/yuriy_finance",
@@ -27,7 +27,7 @@ const managers = [
     max: "https://max.ru/u/f9LHodD0cOKTuyJ3w74xKB69rCiPNZgZG-hyzh4vhmhT1E2ByR507gqcIzA",
     tg: "https://t.me/pol008t",
   },
-];
+].sort((a, b) => ["Анна Крылова", "Полина Тарасова", "Юрий Журавлев"].indexOf(a.name) - ["Анна Крылова", "Полина Тарасова", "Юрий Журавлев"].indexOf(b.name));
 
 const ConsultationPopover = ({ onSelect }: { onSelect?: () => void }) => (
   <Popover>
