@@ -7,8 +7,8 @@ import avatarPolina from "@/assets/avatars/polina.jpg";
 const managers = [
   {
     name: "Юрий Журавлев",
-    role: "Руководитель направления · директор",
-    bio: "Руководит направлением возврата средств и лично курирует сложные дела. Анализирует транзакции, оценивает шансы и выстраивает стратегию работы с международными платёжными системами.",
+    role: "Финансовый аналитик · возврат средств",
+    bio: "Анализирует транзакции, выявляет основания для возврата и просчитывает шансы по каждому делу. Работает с международными платёжными системами и арбитражными процедурами.",
     avatar: avatarYuriy,
     max: "https://max.ru/u/f9LHodD0cOLFPMZsfQvHwM-ndfwMLZa3aWepMMmYak1MfXlvZArt6w8mwG0",
     tg: "https://t.me/yuriy_finance",
@@ -32,7 +32,7 @@ const managers = [
     tg: "https://t.me/pol008t",
     tgHandle: "@pol008t",
   },
-];
+].sort((a, b) => ["Анна Крылова", "Полина Тарасова", "Юрий Журавлев"].indexOf(a.name) - ["Анна Крылова", "Полина Тарасова", "Юрий Журавлев"].indexOf(b.name));
 
 const ManagersSection = () => {
   return (
